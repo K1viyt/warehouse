@@ -20,4 +20,22 @@ class UserTest < ActiveSupport::TestCase
   assert user.authenticate "secret123"
   assert_not user.authenticate "123456"
   end
+
+test "users repid email" do
+ User.create!(
+    name: "Vladislav",
+    email_address: "vlad@exampl1.com",
+    password: "secret123",
+    password_confirmation: "secret123"
+  )
+
+  second_user = User.new(
+    name: "Vadim",
+    email_address: " VLAD@EXAMPL1.COM ",
+    password: "secret123",
+    password_confirmation: "secret123"
+  )
+assert_not second_user.valid?
+assert_includes second_user.errors[:email_address], "has already been taken"
+end
 end

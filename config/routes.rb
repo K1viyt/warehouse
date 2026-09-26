@@ -8,6 +8,7 @@ Rails.application.routes.draw do
  get "products" => "products#index"
  get "products/:id"=>"products#show"
  post "products"=>"products#create"
+ post "registrations" => "registrations#create"
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
