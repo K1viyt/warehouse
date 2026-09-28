@@ -1,48 +1,79 @@
 require "test_helper"
+
 class RegistrationsTest < ActionDispatch::IntegrationTest
   test "creates pending user" do
     assert_difference("User.count", 1) do
-    post "/registrations", params: {
-  user: {
-    name: "Vlad",
-    email_address: "vlad@example.com",
-    password: "secret123",
-    password_confirmation: "secret123"
-  }
-}
-  end
-  assert_response :created
-  created_user = User.order(:id).last
-  assert created_user.pending?
-  assert created_user.operator?
-  assert created_user.authenticate("secret123")
-end
-test "rejects repeated email" do
-  User.create!(
-    name: "Vlad",
-    email_address: "vlad@example.com",
-    password: "secret123",
-    password_confirmation: "secret123"
-  )
-
-  assert_no_difference("User.count") do
-    post "/registrations", params: {
-      user: {
-        name: "Vlad1",
-        email_address: "VLAD@EXAMPLE.COM",
-        password: "secret123",
-        password_confirmation: "secret123"
+      post "/registrations", params: {
+        user: {
+          name: "Vlad",
+          email_address: "vlad@example.com",
+          password: "secret123",
+          password_confirmation: "secret123"
+        }
       }
-    }
+    end
+
+    assert_response :created
+
+    created_user = User.order(:id).last
+
+    assert created_user.pending?
+    assert created_user.operator?
+    assert created_user.authenticate("secret123")
   end
 
-  assert_response :unprocessable_entity
+  test "rejects repeated email" do
+    User.create!(
+      name: "Vlad",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123"
+    )
 
-  assert_instance_of String, response.body
+    assert_no_difference("User.count") do
+      post "/registrations", params: {
+        user: {
+          name: "Vlad1",
+          email_address: "VLAD@EXAMPLE.COM",
+          password: "secret123",
+          password_confirmation: "secret123"
+        }
+      }
+    end
 
-  body = JSON.parse(response.body)
+    assert_response :unprocessable_entity
+    assert_instance_of String, response.body
 
-  assert_instance_of Hash, body
-  assert_includes body["errors"], "Email address has already been taken"
-end
+    body = JSON.parse(response.body)
+
+    assert_instance_of Hash, body
+    assert_includes body["errors"], "Email address has already been taken"
+  end
+
+  test "does not allow user to assign role and status" do
+    assert_difference("User.count", 1) do
+      post "/registrations", params: {
+        user: {
+          name: "Vlad",
+          email_address: "vlad@example.com",
+          password: "secret123",
+          password_confirmation: "secret123",
+          role: "admin",
+          status: "active"
+        }
+      }
+    end
+
+    created_user = User.order(:id).last
+
+    assert created_user.operator?
+    assert created_user.pending?
+    assert_response :created
+
+    body = JSON.parse(response.body)
+
+    assert_equal "operator", body["role"]
+    assert_equal "pending", body["status"]
+    assert_not body.key?("password_digest")
+  end
 end
