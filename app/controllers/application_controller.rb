@@ -7,4 +7,23 @@ class ApplicationController < ActionController::Base
   def current_user
     User.find_by(id: session[:user_id])
   end
+  def require_active_user
+  user = current_user
+
+  if user.nil?
+    render json: {
+      error: "Authentication required"
+    }, status: :unauthorized
+  elsif user.pending?
+    render json: {
+      error: "Account is pending activation"
+    }, status: :forbidden
+  elsif user.blocked?
+    reset_session
+
+    render json: {
+      error: "Your access has been blocked"
+    }, status: :forbidden
+  end
+end
 end

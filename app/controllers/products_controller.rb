@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+   before_action :require_active_user
   def index
     products = Product.all
     render json: products
