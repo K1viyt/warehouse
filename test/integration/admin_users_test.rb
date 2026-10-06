@@ -325,16 +325,13 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
 
     patch "/admin/users/#{pending_user.id}/block"
 
-    assert_response :ok
-
-    pending_user.reload
-    assert pending_user.blocked?
+    assert_response :conflict
 
     body = JSON.parse(response.body)
+    assert_equal "Pending user must be activated first", body["error"]
 
-    assert_equal pending_user.id, body["id"]
-    assert_equal "blocked", body["status"]
-    assert_not body.key?("password_digest")
+    pending_user.reload
+    assert pending_user.pending?
   end
 
   test "rejects blocking administrator account" do
@@ -402,4 +399,252 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
     body = JSON.parse(response.body)
     assert_equal "User not found", body["error"]
   end
+  test "unblocking user return ok" do
+  User.create!(
+      name: "Vlad",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      role: "admin",
+      status: "active"
+    )
+
+    post "/session", params: {
+      login: {
+        email_address: "vlad@example.com",
+        password: "secret123"
+      }
+    }
+
+    assert_response :ok
+
+    blocked_user = User.create!(
+      name: "Blocked Operator",
+      email_address: "blocked@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      status: "blocked"
+    )
+    patch "/admin/users/#{blocked_user.id}/unblock"
+    assert_response :ok
+    blocked_user.reload
+    assert blocked_user.active?
+    body = JSON.parse(response.body)
+
+    assert_equal blocked_user.id, body["id"]
+    assert_equal "active", body["status"]
+    assert_not body.key?("password_digest")
+end
+ test "unblocking active user return conflict" do
+   User.create!(
+      name: "Vlad",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      role: "admin",
+      status: "active"
+    )
+
+    post "/session", params: {
+      login: {
+        email_address: "vlad@example.com",
+        password: "secret123"
+      }
+    }
+
+    assert_response :ok
+
+    active_user = User.create!(
+      name: "Active Operator",
+      email_address: "operator@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      status: "active"
+    )
+    patch "/admin/users/#{active_user.id}/unblock"
+    assert_response :conflict
+    active_user.reload
+    assert active_user.active?
+    body = JSON.parse(response.body)
+    assert_equal "User is already active", body["error"]
+end
+test "unblocking pending user return conflict" do
+   User.create!(
+      name: "Vlad",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      role: "admin",
+      status: "active"
+    )
+
+    post "/session", params: {
+      login: {
+        email_address: "vlad@example.com",
+        password: "secret123"
+      }
+    }
+
+    assert_response :ok
+
+    pending_user = User.create!(
+      name: "Pending Operator",
+      email_address: "operator@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      status: "pending"
+    )
+    patch "/admin/users/#{pending_user.id}/unblock"
+    assert_response :conflict
+    pending_user.reload
+    assert pending_user.pending?
+    body = JSON.parse(response.body)
+    assert_equal "Pending user must be activated first", body["error"]
+end
+test "unblock not found user return not found" do
+    User.create!(
+      name: "Vlad",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      role: "admin",
+      status: "active"
+    )
+
+    post "/session", params: {
+      login: {
+        email_address: "vlad@example.com",
+        password: "secret123"
+      }
+    }
+
+    assert_response :ok
+
+    patch "/admin/users/0/unblock"
+
+    assert_response :not_found
+
+    body = JSON.parse(response.body)
+    assert_equal "User not found", body["error"]
+  end
+  test("retun pull users pending") do
+    User.create!(
+      name: "Vlad",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      role: "admin",
+      status: "active"
+    )
+
+    post "/session", params: {
+      login: {
+        email_address: "vlad@example.com",
+        password: "secret123"
+      }
+    }
+
+    assert_response :ok
+    operator = User.create!(
+  name: "Warehouse Operator",
+  email_address: "operator@example.com",
+  password: "secret123",
+  password_confirmation: "secret123",
+  status: "pending"
+)
+get "/admin/users"
+
+assert_response :ok
+body = JSON.parse(response.body)
+users = body["users"]
+operator_json = users.find { |item| item["id"] == operator.id }
+assert_not_nil operator_json
+assert_equal "Warehouse Operator", operator_json["name"]
+assert_equal "pending", operator_json["status"]
+assert_not operator_json.key?("password_digest")
+end
+
+ test("returns first page of users") do
+    User.create!(
+      name: "Vlad",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      role: "admin",
+      status: "active"
+    )
+
+    post "/session", params: {
+      login: {
+        email_address: "vlad@example.com",
+        password: "secret123"
+      }
+    }
+
+    assert_response :ok
+    operator = User.create!(
+  name: "Warehouse Operator",
+  email_address: "operator@example.com",
+  password: "secret123",
+  password_confirmation: "secret123",
+  status: "pending"
+)
+get "/admin/users", params: {
+  page: 1,
+  per_page: 2
+}
+
+assert_response :ok
+
+body = JSON.parse(response.body)
+users = body["users"]
+pagination = body["pagination"]
+
+assert_equal 2, users.length
+assert_equal 1, pagination["page"]
+assert_equal 2, pagination["per_page"]
+assert_equal User.count, pagination["total"]
+end
+test "returns users filtered by pending status" do
+  User.create!(
+      name: "Vlad",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      role: "admin",
+      status: "active"
+    )
+
+    post "/session", params: {
+      login: {
+        email_address: "vlad@example.com",
+        password: "secret123"
+      }
+    }
+
+    assert_response :ok
+
+  pending_user = User.create!(
+    name: "Pending Operator",
+    email_address: "operator@example.com",
+    password: "secret123",
+    password_confirmation: "secret123",
+    status: "pending"
+  )
+
+  get "/admin/users", params: {
+    status: "pending",
+    page: 1,
+    per_page: 20
+  }
+
+  assert_response :ok
+
+  body = JSON.parse(response.body)
+  users = body["users"]
+
+  assert users.all? { |user| user["status"] == "pending" }
+  assert_includes users.map { |user| user["id"] }, pending_user.id
+  assert_equal User.pending.count, body["pagination"]["total"]
+end
 end

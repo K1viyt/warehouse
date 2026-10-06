@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     get "users/pending", to: "users#pending"
     patch "users/:id/activate", to: "users#activate"
     patch "users/:id/block", to: "users#block"
+    patch "users/:id/unblock", to: "users#unblock"
+    get "users", to: "users#index"
   end
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
