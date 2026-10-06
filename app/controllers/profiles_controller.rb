@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  before_action :require_authenticated_user
   def show
     user = current_user
 

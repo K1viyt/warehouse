@@ -94,4 +94,25 @@ class SessionsTest < ActionDispatch::IntegrationTest
 
     assert_response :unauthorized
   end
+
+  test "normalizes email before authentication" do
+    user = User.create!(
+      name: "Vladislav",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123"
+    )
+
+    post "/session", params: {
+      login: {
+        email_address: " VLAD@EXAMPLE.COM ",
+        password: "secret123"
+      }
+    }
+
+    assert_response :ok
+
+    body = JSON.parse(response.body)
+    assert_equal user.id, body["id"]
+  end
 end

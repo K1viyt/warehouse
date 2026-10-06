@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
           error: "Your access has been blocked"
         }, status: :forbidden
       else
+        reset_session
         session[:user_id] = user.id
 
         render json: {

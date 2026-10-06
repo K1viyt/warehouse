@@ -34,4 +34,36 @@ class ProfileTest < ActionDispatch::IntegrationTest
     assert_equal "vlad@example.com", body["email_address"]
     assert_equal "pending", body["status"]
   end
+
+  test "clears session when active user becomes blocked" do
+    user = User.create!(
+      name: "Vlad",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      status: "active"
+    )
+
+    post "/session", params: {
+      login: {
+        email_address: "vlad@example.com",
+        password: "secret123"
+      }
+    }
+
+    assert_response :ok
+
+    user.blocked!
+
+    get "/me"
+
+    assert_response :forbidden
+
+    body = JSON.parse(response.body)
+    assert_equal "Your access has been blocked", body["error"]
+
+    get "/me"
+
+    assert_response :unauthorized
+  end
 end

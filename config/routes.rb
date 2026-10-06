@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   post "session" => "sessions#create"
   get "me" => "profiles#show"
   delete "session" => "sessions#destroy"
+  namespace :admin do
+    get "users/pending", to: "users#pending"
+    patch "users/:id/activate", to: "users#activate"
+    patch "users/:id/block", to: "users#block"
+  end
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
