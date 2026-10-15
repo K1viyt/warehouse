@@ -4,7 +4,7 @@ import xml.etree.ElementTree as E
 
 HERE=Path(__file__).resolve().parent
 DATA=json.loads((HERE/"requirements.json").read_text(encoding="utf-8"))
-OUT=HERE/"section-spec.drawio"
+OUT=HERE/"technical-spec.drawio"
 COL={"ready":("#D8DFCE","#768462","ЕСТЬ · проверено разработчиком · QA ожидает"),
 "partial":("#E5D3B6","#AB7843","ЧАСТИЧНО · завершённого сценария нет"),
 "plan":("#E2DDD3","#918B7D","ПЛАН · API и UI пока нет"),
@@ -226,6 +226,6 @@ for i,pid in enumerate(order):
     root.append(E.fromstring(E.tostring(models[pid][0],encoding="unicode")))
     E.ElementTree(root).write(qa/f"{i:02d}-{pid}.drawio",encoding="utf-8",xml_declaration=True)
 report={"pages":len(order),"requirements":sum(len(p["cards"]) for p in DATA["pages"]),"qa_cases":len(qa_access)+len(qa_catalog),"baseline":DATA["codeCommit"],"page_ids":order}
-(HERE/"build-report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
+(HERE/"technical-report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
 print(json.dumps(report,ensure_ascii=False))
 

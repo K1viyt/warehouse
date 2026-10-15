@@ -1,26 +1,9 @@
 {
-  "pages": 18,
-  "requirements": 64,
-  "qa_cases": 32,
+  "pages": 9,
+  "functions": 50,
   "baseline": "ced61fb",
-  "page_ids": [
-    "map",
-    "passport",
-    "registration",
-    "sessions",
-    "lifecycle",
-    "administration",
-    "catalog",
-    "balances",
-    "operations",
-    "history",
-    "api-access",
-    "api-catalog",
-    "data",
-    "quality",
-    "qa-access",
-    "qa-stock",
-    "decisions",
-    "acceptance"
-  ]
+  "audience": "customer",
+  "internal_links": 16,
+  "xml_errors": 0,
+  "xml_warnings": 0
 }
