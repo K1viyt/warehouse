@@ -18,5 +18,7 @@ class ProductsController < ApplicationController
     else
          render json: { errors: product.errors.full_messages }, status: :unprocessable_entity
     end
+  rescue ActiveRecord::RecordNotUnique
+    render json: { errors: [ "A product with this article number already exists." ] }, status: :conflict
   end
 end

@@ -582,7 +582,7 @@ end
     }
 
     assert_response :ok
-    operator = User.create!(
+   User.create!(
   name: "Warehouse Operator",
   email_address: "operator@example.com",
   password: "secret123",
@@ -646,5 +646,43 @@ test "returns users filtered by pending status" do
   assert users.all? { |user| user["status"] == "pending" }
   assert_includes users.map { |user| user["id"] }, pending_user.id
   assert_equal User.pending.count, body["pagination"]["total"]
+end
+test "returns second page of users" do
+User.create!(
+      name: "Vlad",
+      email_address: "vlad@example.com",
+      password: "secret123",
+      password_confirmation: "secret123",
+      role: "admin",
+      status: "active"
+    )
+
+    post "/session", params: {
+      login: {
+        email_address: "vlad@example.com",
+        password: "secret123"
+      }
+    }
+    assert_response :ok
+    3.times do |number|
+      User.create!(
+    name: "Operator #{number}",
+    email_address: "operator#{number}@example.com",
+    password: "secret123",
+    password_confirmation: "secret123"
+  )
+    end
+    all_ids = User.order(:id).pluck(:id)
+    expected_ids = all_ids.drop(2).take(2)
+
+    get "/admin/users", params: { page: 2, per_page: 2 }
+    assert_response :ok
+    body = JSON.parse(response.body)
+    actual_ids = body["users"].map { |user| user["id"] }
+    assert_equal expected_ids, actual_ids
+    assert_equal 2, body["pagination"]["page"]
+    assert_equal 2, body["pagination"]["per_page"]
+    assert_equal 4, body["pagination"]["total"]
+    assert_equal 2, body["pagination"]["total_pages"]
 end
 end

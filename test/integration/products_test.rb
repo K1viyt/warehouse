@@ -16,7 +16,7 @@ class ProductsTest < ActionDispatch::IntegrationTest
     sign_in_active_user
     assert_difference("Product.count", 1) do
       post "/products", params: {
-    product: { sku: "TEST-002", name: "Шуруп", unit: "pcs" }
+    product: { sku: "TEST-002", name: "Шуруп", unit: "шт" }
 }
     end
 
