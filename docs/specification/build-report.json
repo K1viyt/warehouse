@@ -1,0 +1,26 @@
+{
+  "pages": 18,
+  "requirements": 64,
+  "qa_cases": 32,
+  "baseline": "ced61fb",
+  "page_ids": [
+    "map",
+    "passport",
+    "registration",
+    "sessions",
+    "lifecycle",
+    "administration",
+    "catalog",
+    "balances",
+    "operations",
+    "history",
+    "api-access",
+    "api-catalog",
+    "data",
+    "quality",
+    "qa-access",
+    "qa-stock",
+    "decisions",
+    "acceptance"
+  ]
+}
