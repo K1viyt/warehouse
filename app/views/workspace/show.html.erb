@@ -1,0 +1,52 @@
+<% content_for :title, "СЕКЦИЯ — складской каталог" %>
+<div data-controller="workspace" data-workspace-images-value="<%= { warehouse: asset_path("section/warehouse.webp"), generic: asset_path("section/material.webp"), bolt: asset_path("section/bolt.webp"), dowel: asset_path("section/dowel.webp"), screw: asset_path("section/screw.webp") }.to_json %>">
+  <div data-workspace-target="content" aria-live="polite" aria-busy="true"><div class="boot"><span class="wordmark">СЕКЦИЯ</span><p>Открываем рабочее пространство…</p></div></div>
+  <div class="toast" data-workspace-target="toast" role="status" hidden></div>
+  <template data-workspace-target="loginTemplate"><%= render "auth_form", registration: false %></template>
+  <template data-workspace-target="registerTemplate"><%= render "auth_form", registration: true %></template>
+  <template data-workspace-target="pendingTemplate">
+    <div class="auth-layout"><%= render "scene" %><main class="auth-main"><div class="auth-topline"><span class="eyebrow">Доступ к системе</span><span class="mono">СЕКЦИЯ / 03</span></div>
+      <section class="auth-form-wrap"><span class="waiting-mark" aria-hidden="true">↗</span><span class="section-index">ЗАЯВКА ПРИНЯТА</span><h2>Осталось<br>совсем немного.</h2><p class="muted">Администратор рассмотрит заявку и откроет доступ к каталогу. Пока можно закрыть страницу — аккаунт сохранён.</p><p class="pending-email mono"></p><div class="form-error" role="alert" tabindex="-1" hidden></div>
+      <button class="button button--primary" data-action="workspace#checkStatus">Проверить статус <span aria-hidden="true">↻</span></button>
+      <button class="text-button" data-action="workspace#logout">Выйти из аккаунта</button></section>
+      <div class="auth-bottomline"><span class="status-dot"></span> Ожидаем активацию</div></main></div>
+  </template>
+  <template data-workspace-target="registeredTemplate">
+    <div class="auth-layout"><%= render "scene" %><main class="auth-main"><section class="auth-form-wrap"><span class="section-index">ЗАЯВКА ПРИНЯТА</span><h2>Вы в списке.</h2><p class="muted">Аккаунт создан. Войдите, чтобы проверить статус заявки. Доступ к товарам откроет администратор.</p><button class="button button--primary" data-action="workspace#navigate" data-view="login">Перейти ко входу ↗</button></section></main></div>
+  </template>
+  <template data-workspace-target="shellTemplate">
+    <div class="workspace-shell">
+      <aside class="sidebar"><a href="/" class="wordmark">СЕКЦИЯ<span class="wordmark__dot"></span></a><p class="sidebar__caption">Складской каталог</p>
+        <nav aria-label="Основная навигация"><button data-action="workspace#navigate" data-view="catalog"><span aria-hidden="true">▧</span> Товары <span class="nav-arrow" aria-hidden="true">↗</span></button><button data-action="workspace#navigate" data-view="users" data-admin-only hidden><span aria-hidden="true">♧</span> Пользователи</button><button data-action="workspace#navigate" data-view="profile"><span aria-hidden="true">◉</span> Профиль</button></nav>
+        <div class="sidebar__footer"><span class="mono">ВАШЕ РАБОЧЕЕ МЕСТО</span><strong class="current-user-name"></strong><span class="current-user-role"></span><button class="sidebar-logout" data-action="workspace#logout">Выйти <span aria-hidden="true">↗</span></button></div>
+      </aside>
+      <div class="workspace-main"><header class="mobile-header"><a class="wordmark" href="/">СЕКЦИЯ</a><button class="text-button" data-action="workspace#toggleMenu" aria-label="Открыть меню" aria-expanded="false">Меню ☰</button></header><main class="workspace-page" data-workspace-target="page" tabindex="-1"></main></div>
+    </div>
+  </template>
+  <template data-workspace-target="catalogTemplate">
+    <div class="page-overline"><span class="eyebrow">Материалы и крепёж</span><span class="mono">КАТАЛОГ / 01</span></div>
+    <div class="page-heading"><div><h1>Товары<span class="heading-dot">.</span></h1><p class="muted">Всё начинается с точного артикула.</p></div><button class="button button--primary" data-action="workspace#newProduct">＋ Добавить товар</button></div>
+    <div class="catalog-toolbar"><div class="view-switch" aria-label="Вид каталога"><button data-action="workspace#setView" data-mode="cards" aria-pressed="true">▦ Карточки</button><button data-action="workspace#setView" data-mode="table" aria-pressed="false">☷ Таблица</button></div><span class="catalog-count mono"></span><button class="text-button" data-action="workspace#loadProducts" aria-label="Обновить каталог">Обновить ↻</button></div>
+    <div class="form-error page-error" role="alert" hidden></div><div class="catalog-content"></div>
+  </template>
+  <template data-workspace-target="usersTemplate">
+    <div class="page-overline"><span class="eyebrow">Управление доступом</span><span class="mono">КОМАНДА / 02</span></div><div class="page-heading"><div><h1>Пользователи<span class="heading-dot">.</span></h1><p class="muted">Нужные люди. Правильный доступ.</p></div></div>
+    <div class="users-toolbar"><div class="filter-tabs" role="group" aria-label="Статус пользователей"><button data-status="" data-action="workspace#filterUsers" aria-pressed="true">Все</button><button data-status="pending" data-action="workspace#filterUsers" aria-pressed="false">Ожидают</button><button data-status="active" data-action="workspace#filterUsers" aria-pressed="false">Активные</button><button data-status="blocked" data-action="workspace#filterUsers" aria-pressed="false">Заблокированные</button></div><button class="text-button" data-action="workspace#loadUsers">Обновить ↻</button></div>
+    <div class="form-error page-error" role="alert" hidden></div><div class="users-content"></div><div class="pagination"><button class="button button--quiet" data-action="workspace#previousPage">← Назад</button><span class="pagination-label mono"></span><button class="button button--quiet" data-action="workspace#nextPage">Далее →</button></div>
+  </template>
+  <template data-workspace-target="profileTemplate">
+    <div class="page-overline"><span class="eyebrow">Личное пространство</span><span class="mono">ПРОФИЛЬ / 03</span></div><div class="page-heading"><h1>Ваш профиль<span class="heading-dot">.</span></h1></div><div class="profile-content"></div>
+  </template>
+  <dialog class="drawer" data-workspace-target="drawer" aria-labelledby="drawer-title"><div class="drawer__header"><span class="mono">КАТАЛОГ / ДЕТАЛИ</span><button class="icon-button" data-action="workspace#closeDrawer" aria-label="Закрыть панель">✕</button></div><div data-workspace-target="drawerContent"></div></dialog>
+  <template data-workspace-target="productFormTemplate">
+    <h2 id="drawer-title">Новый товар<span class="heading-dot">.</span></h2><p class="muted">Добавьте позицию в общий каталог.</p>
+    <form class="form-stack" data-action="submit->workspace#createProduct" data-turbo="false">
+      <label class="field">Название<input name="name" required maxlength="200" placeholder="Например, Болт М8"></label>
+      <label class="field">Артикул<input name="sku" required maxlength="120" placeholder="Например, BOLT-M8" spellcheck="false"></label>
+      <label class="field">Единица измерения<select name="unit" required><option value="">Выберите единицу</option><option value="шт">шт — штуки</option><option value="кг">кг — килограммы</option></select></label>
+      <div class="field-hint">Артикул должен быть уникальным. Единицу используйте одинаково для всех операций с товаром.</div><div class="form-error" role="alert" tabindex="-1" hidden></div>
+      <div class="form-actions"><button class="button button--primary" type="submit">Создать товар ↗</button><button type="button" class="text-button" data-action="workspace#closeDrawer">Отмена</button></div>
+    </form>
+  </template>
+  <noscript><p class="noscript-note">Для работы форм включите JavaScript в браузере.</p></noscript>
+</div>

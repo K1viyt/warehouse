@@ -1,0 +1,162 @@
+.auth-layout {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:100svh;
+}
+
+.auth-scene {
+  position:relative;
+  overflow:hidden;
+  min-height:100svh;
+  background:var(--ink);
+  color:var(--white);
+}
+
+.auth-scene__image {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+.auth-scene__shade {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,#121a17c9 0%,#121a177a 35%,#121a1720 62%,#121a17b3 100%);
+}
+
+.auth-scene__content {
+  position:relative;
+  z-index:1;
+  min-height:100svh;
+  padding:42px 48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:54px;
+}
+
+.auth-scene__headline {
+  margin-top:10px;
+}
+
+.auth-scene__headline .eyebrow {
+  color:#dfddd1;
+  display:block;
+  margin-bottom:24px;
+}
+
+.auth-scene h1 {
+  font-size:clamp(48px,6.6vw,100px);
+  font-weight:500;
+  line-height:1.03;
+  letter-spacing:-.065em;
+  margin:0;
+}
+
+.auth-scene__footer {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:25px;
+}
+
+.auth-scene__footer p {
+  font-size:12px;
+  line-height:1.6;
+  margin:0;
+  color:#e3ded2;
+}
+
+.auth-scene__footer .mono {
+  font-size:9px;
+}
+
+.auth-main {
+  padding:42px 56px 28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.auth-topline {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:var(--muted);
+}
+
+.auth-topline .mono {
+  font-size:9px;
+}
+
+.auth-form-wrap {
+  width:min(100%,430px);
+  margin:30px auto;
+}
+
+.auth-form-wrap h2 {
+  font-size:clamp(32px,3.3vw,48px);
+  line-height:1.14;
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.auth-form-wrap>.muted {
+  font-size:13px;
+  margin-bottom:0;
+}
+
+.auth-switch {
+  font-size:12px;
+  color:var(--muted);
+  margin-top:28px;
+}
+
+.auth-switch .text-button {
+  margin-left:7px;
+  color:var(--ink);
+}
+
+.auth-bottomline {
+  display:flex;
+  align-items:center;
+  font-size:10px;
+  color:var(--muted);
+  gap:2px;
+}
+
+.auth-bottomline .mono {
+  margin-left:auto;
+  font-size:9px;
+}
+
+.waiting-mark {
+  display:grid;
+  place-items:center;
+  width:70px;
+  height:70px;
+  border:1px solid var(--line);
+  border-radius:50%;
+  font-size:36px;
+  color:var(--copper);
+  margin-bottom:35px;
+}
+
+.pending-email {
+  margin-top:24px;
+  color:var(--muted);
+}
+
+.auth-form-wrap>.button {
+  margin-top:24px;
+}
+
+.auth-form-wrap>.text-button {
+  display:block;
+  margin-top:16px;
+}
+
