@@ -13,11 +13,13 @@ class ProductsController < ApplicationController
     attributes = params.expect(product: [ :sku, :name, :unit ])
 
     product = Product.new(attributes)
-    if product.save
-      render json: product, status: :created
-    else
-         render json: { errors: product.errors.full_messages }, status: :unprocessable_entity
-    end
+    # Транзакция
+    ProductCreation.call(product)
+    render json: product, status: :created
+  rescue ActiveRecord::RecordInvalid => error
+        render json: { errors: error.record.errors.full_messages },
+         status: :unprocessable_entity
+
   rescue ActiveRecord::RecordNotUnique
     render json: { errors: [ "A product with this article number already exists." ] }, status: :conflict
   end

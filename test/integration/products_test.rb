@@ -3,24 +3,29 @@ require "test_helper"
 class ProductsTest < ActionDispatch::IntegrationTest
   test "rejects product with empty name" do
     sign_in_active_user
+    balances_before = StockBalance.count
     assert_no_difference("Product.count") do
      post "/products", params: {
-    product: { sku: "TEST-001", name: "", unit: "pcs" }
+    product: { sku: "TEST-001", name: "", unit: "шт" }
 }
     end
 
     assert_response :unprocessable_entity
+    assert_equal balances_before, StockBalance.count
   end
 
   test "creates product with valid name" do
     sign_in_active_user
+     balances_before = StockBalance.count
     assert_difference("Product.count", 1) do
       post "/products", params: {
     product: { sku: "TEST-002", name: "Шуруп", unit: "шт" }
 }
     end
-
+    assert_equal balances_before + 1, StockBalance.count
     assert_response :created
+    saved_product = Product.find_by!(sku: "TEST-002")
+    assert_equal 0, saved_product.stock_balance.quantity
   end
   test "requires authentication" do
   get "/products"
