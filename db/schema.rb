@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_10_12_174151) do
+ActiveRecord::Schema[8.1].define(version: 2026_10_26_083532) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -33,6 +33,20 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_12_174151) do
     t.check_constraint "quantity >= 0::numeric", name: "stock_balances_quantity_nonnegative"
   end
 
+  create_table "stock_movements", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.string "movement_type", null: false
+    t.bigint "product_id", null: false
+    t.decimal "quantity", precision: 12, scale: 3, null: false
+    t.text "reason", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["product_id"], name: "index_stock_movements_on_product_id"
+    t.index ["user_id"], name: "index_stock_movements_on_user_id"
+    t.check_constraint "movement_type::text = ANY (ARRAY['receipt'::character varying, 'issue'::character varying]::text[])", name: "stock_movements_type_allowed"
+    t.check_constraint "quantity > 0::numeric", name: "stock_movements_quantity_positive"
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "email_address", null: false
@@ -45,4 +59,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_10_12_174151) do
   end
 
   add_foreign_key "stock_balances", "products"
+  add_foreign_key "stock_movements", "products"
+  add_foreign_key "stock_movements", "users"
 end
