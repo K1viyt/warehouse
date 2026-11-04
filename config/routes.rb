@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   post "session" => "sessions#create"
   get "me" => "profiles#show"
   delete "session" => "sessions#destroy"
+  get "registration_options", to: "registration_options#index"
+  get "email_verification", to: "email_verifications#show", as: :email_verification
+  post "email_verification", to: "email_verifications#create"
+  post "email_verification/resend", to: "email_verifications#resend"
+
   namespace :admin do
     get "users/pending", to: "users#pending"
     patch "users/:id/activate", to: "users#activate"

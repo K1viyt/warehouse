@@ -4,7 +4,7 @@ module Admin
     before_action :require_admin
 
     def pending
-      users = User.pending.order(:created_at)
+      users = current_organization.users.pending.order(:created_at)
 
       render json: users.as_json(
         only: [ :id, :name, :email_address, :role, :status, :created_at ]
@@ -12,7 +12,7 @@ module Admin
     end
 
     def activate
-      user = User.find_by(id: params[:id])
+      user = current_organization.users.find_by(id: params[:id])
 
       if user.nil?
         render json: {
@@ -27,7 +27,10 @@ module Admin
           error: "Blocked user must be unblocked first"
         }, status: :conflict
       else
-        user.active!
+        user.with_lock do
+          user.active!
+          user.warehouse_memberships.pending.update_all(status: "active", updated_at: Time.current)
+        end
 
         render json: user.as_json(
           only: [ :id, :name, :email_address, :role, :status, :created_at ]
@@ -36,7 +39,7 @@ module Admin
     end
 
     def block
-      user = User.find_by(id: params[:id])
+      user = current_organization.users.find_by(id: params[:id])
 
       if user.nil?
         render json: {
@@ -63,7 +66,7 @@ module Admin
       end
     end
     def unblock
-      user = User.find_by(id: params[:id])
+      user = current_organization.users.find_by(id: params[:id])
       if user.nil?
         render json: { error: "User not found" }, status: :not_found
       elsif user.active?
@@ -86,7 +89,7 @@ module Admin
   page = [ params.fetch(:page, 1).to_i, 1 ].max
   per_page = params.fetch(:per_page, 20).to_i.clamp(1, 100)
 
-  users_scope = User.order(:id)
+  users_scope = current_organization.users.order(:id)
 
   if params[:status].present?
     users_scope = users_scope.where(status: params[:status])

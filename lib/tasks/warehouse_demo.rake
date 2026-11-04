@@ -1,6 +1,7 @@
 namespace :warehouse do
   desc "Add three illustrative catalog products without overwriting existing records"
   task demo_catalog: :environment do
+    organization = Organization.find(ENV.fetch("ORGANIZATION_ID"))
     products = [
       { sku: "BOLT-M8", name: "Болт М8", unit: "шт" },
       { sku: "DOWEL-8", name: "Дюбель", unit: "шт" },
@@ -9,7 +10,7 @@ namespace :warehouse do
 
     Product.transaction do
       products.each do |attributes|
-        Product.find_or_create_by!(sku: attributes.fetch(:sku)) do |product|
+        organization.products.find_or_create_by!(sku: attributes.fetch(:sku)) do |product|
           product.assign_attributes(attributes)
         end
       end

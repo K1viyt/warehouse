@@ -1,12 +1,14 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  organization: one
   sku: FIXTURE-001
   name: MyString
   unit: кг
   archived_at: 2026-09-10 19:33:03
 
 two:
+  organization: one
   sku: FIXTURE-002
   name: MyString
   unit: шт

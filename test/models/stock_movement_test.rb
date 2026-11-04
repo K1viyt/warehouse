@@ -5,12 +5,12 @@ class StockMovementTest < ActiveSupport::TestCase
   # Подготовка
   product = products(:one)
 
-  user = User.create!(
+  user = create_user(
   name: "Оператор",
   email_address: "movement-test@example.com",
   password: "secret123"
 )
-  movement = StockMovement.new(
+  movement = StockMovement.new(warehouse: warehouses(:one),
   product: product,
   user: user,
   quantity: 0,
@@ -24,12 +24,12 @@ end
 test "accepts valid receipt" do
   # Подготовка
   product = products(:one)
-  user = User.create!(
+  user = create_user(
   name: "Оператор",
   email_address: "movement-test@example.com",
   password: "secret123"
 )
-  movement = StockMovement.new(
+  movement = StockMovement.new(warehouse: warehouses(:one),
   product: product,
   user: user,
   quantity: 15,
@@ -42,12 +42,12 @@ end
 test "rejects unknown movement type" do
   # Подготовка
   product = products(:one)
-  user = User.create!(
+  user = create_user(
   name: "Оператор",
   email_address: "movement-test@example.com",
   password: "secret123"
 )
-  movement = StockMovement.new(
+  movement = StockMovement.new(warehouse: warehouses(:one),
   product: product,
   user: user,
   quantity: 15,

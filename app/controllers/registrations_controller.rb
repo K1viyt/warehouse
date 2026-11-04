@@ -1,8 +1,22 @@
 class RegistrationsController < ApplicationController
   def create
-    attributes =params.expect(user: [ :name, :email_address, :password, :password_confirmation ])
-    user = User.new(attributes)
-    if user.save
+     attributes = params.expect(user: [ :name, :email_address, :password, :password_confirmation, :organization_id, :warehouse_id ])
+    organization = Organization.find_by(id: attributes.delete(:organization_id))
+    warehouse = organization&.warehouses&.find_by(
+    id: attributes.delete(:warehouse_id)
+    )
+   unless warehouse
+    return render json: {
+    errors: [ "Выберите существующую фирму и принадлежащий ей склад" ]
+  }, status: :unprocessable_entity
+   end
+    user = organization.users.new(attributes)
+    if user.valid?
+      User.transaction do
+        user.save!
+        user.warehouse_memberships.create!(organization: organization, warehouse: warehouse, status: "pending")
+      end
+      EmailVerificationMailer.confirmation(user).deliver_later
      render json: {
   id: user.id,
   name: user.name,
