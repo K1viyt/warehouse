@@ -1,0 +1,6 @@
+_fixture:
+  model_class: StockWarehouse
+
+one:
+  organization: one
+  name: Основной склад

@@ -1,8 +1,8 @@
 class StockBalanceBackfill
-  def self.call
-    products = Product.where.missing(:stock_balance)
+  def self.call(warehouse:)
+    products = warehouse.organization.products.where.not(id: warehouse.stock_balances.select(:product_id))
     products.each do |product|
-      product.create_stock_balance!(quantity: 0)
+      product.stock_balances.create!(warehouse: warehouse, quantity: 0)
     end
   end
 end

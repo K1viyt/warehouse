@@ -8,7 +8,7 @@ class ProfileTest < ActionDispatch::IntegrationTest
   end
 
   test "returns profile after login" do
-    user = User.create!(
+    user = create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -36,7 +36,7 @@ class ProfileTest < ActionDispatch::IntegrationTest
   end
 
   test "clears session when active user becomes blocked" do
-    user = User.create!(
+    user = create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",

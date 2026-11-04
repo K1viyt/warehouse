@@ -2,7 +2,7 @@ require "test_helper"
 
 class AdminUsersTest < ActionDispatch::IntegrationTest
   test "rejects active operator from pending users list" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -29,7 +29,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
   end
 
   test "returns pending users to active admin" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -45,7 +45,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
       }
     }
 
-    pending_user = User.create!(
+    pending_user = create_user(
       name: "Pending Operator",
       email_address: "operator@example.com",
       password: "secret123",
@@ -78,7 +78,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
   end
 
   test "activates pending user" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -96,7 +96,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
 
     assert_response :ok
 
-    pending_user = User.create!(
+    pending_user = create_user(
       name: "Pending Operator",
       email_address: "operator@example.com",
       password: "secret123",
@@ -118,7 +118,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
   end
 
   test "rejects activation of active user" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -136,7 +136,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
 
     assert_response :ok
 
-    active_user = User.create!(
+    active_user = create_user(
       name: "Active Operator",
       email_address: "operator@example.com",
       password: "secret123",
@@ -154,7 +154,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
   end
 
   test "rejects activation of blocked user" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -172,7 +172,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
 
     assert_response :ok
 
-    blocked_user = User.create!(
+    blocked_user = create_user(
       name: "Blocked Operator",
       email_address: "blocked@example.com",
       password: "secret123",
@@ -192,7 +192,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
   end
 
   test "returns not found when activating missing user" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -219,7 +219,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
   end
 
   test "blocks active operator" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -237,7 +237,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
 
     assert_response :ok
 
-    operator = User.create!(
+    operator = create_user(
       name: "Active Operator",
       email_address: "operator@example.com",
       password: "secret123",
@@ -260,7 +260,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
   end
 
   test "rejects blocking already blocked user" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -278,7 +278,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
 
     assert_response :ok
 
-    blocked_user = User.create!(
+    blocked_user = create_user(
       name: "Blocked Operator",
       email_address: "blocked@example.com",
       password: "secret123",
@@ -298,7 +298,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
   end
 
   test "blocks pending operator" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -316,7 +316,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
 
     assert_response :ok
 
-    pending_user = User.create!(
+    pending_user = create_user(
       name: "Pending Operator",
       email_address: "operator@example.com",
       password: "secret123",
@@ -335,7 +335,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
   end
 
   test "rejects blocking administrator account" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -353,7 +353,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
 
     assert_response :ok
 
-    admin = User.create!(
+    admin = create_user(
       name: "Admin",
       email_address: "second-admin@example.com",
       password: "secret123",
@@ -374,7 +374,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
   end
 
   test "returns not found when blocking missing user" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -400,7 +400,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
     assert_equal "User not found", body["error"]
   end
   test "unblocking user return ok" do
-  User.create!(
+  create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -418,7 +418,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
 
     assert_response :ok
 
-    blocked_user = User.create!(
+    blocked_user = create_user(
       name: "Blocked Operator",
       email_address: "blocked@example.com",
       password: "secret123",
@@ -436,7 +436,7 @@ class AdminUsersTest < ActionDispatch::IntegrationTest
     assert_not body.key?("password_digest")
 end
  test "unblocking active user return conflict" do
-   User.create!(
+   create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -454,7 +454,7 @@ end
 
     assert_response :ok
 
-    active_user = User.create!(
+    active_user = create_user(
       name: "Active Operator",
       email_address: "operator@example.com",
       password: "secret123",
@@ -469,7 +469,7 @@ end
     assert_equal "User is already active", body["error"]
 end
 test "unblocking pending user return conflict" do
-   User.create!(
+   create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -487,7 +487,7 @@ test "unblocking pending user return conflict" do
 
     assert_response :ok
 
-    pending_user = User.create!(
+    pending_user = create_user(
       name: "Pending Operator",
       email_address: "operator@example.com",
       password: "secret123",
@@ -502,7 +502,7 @@ test "unblocking pending user return conflict" do
     assert_equal "Pending user must be activated first", body["error"]
 end
 test "unblock not found user return not found" do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -528,7 +528,7 @@ test "unblock not found user return not found" do
     assert_equal "User not found", body["error"]
   end
   test("retun pull users pending") do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -545,7 +545,7 @@ test "unblock not found user return not found" do
     }
 
     assert_response :ok
-    operator = User.create!(
+    operator = create_user(
   name: "Warehouse Operator",
   email_address: "operator@example.com",
   password: "secret123",
@@ -565,7 +565,7 @@ assert_not operator_json.key?("password_digest")
 end
 
  test("returns first page of users") do
-    User.create!(
+    create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -582,7 +582,7 @@ end
     }
 
     assert_response :ok
-   User.create!(
+   create_user(
   name: "Warehouse Operator",
   email_address: "operator@example.com",
   password: "secret123",
@@ -606,7 +606,7 @@ assert_equal 2, pagination["per_page"]
 assert_equal User.count, pagination["total"]
 end
 test "returns users filtered by pending status" do
-  User.create!(
+  create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -624,7 +624,7 @@ test "returns users filtered by pending status" do
 
     assert_response :ok
 
-  pending_user = User.create!(
+  pending_user = create_user(
     name: "Pending Operator",
     email_address: "operator@example.com",
     password: "secret123",
@@ -648,7 +648,7 @@ test "returns users filtered by pending status" do
   assert_equal User.pending.count, body["pagination"]["total"]
 end
 test "returns second page of users" do
-User.create!(
+create_user(
       name: "Vlad",
       email_address: "vlad@example.com",
       password: "secret123",
@@ -665,7 +665,7 @@ User.create!(
     }
     assert_response :ok
     3.times do |number|
-      User.create!(
+      create_user(
     name: "Operator #{number}",
     email_address: "operator#{number}@example.com",
     password: "secret123",

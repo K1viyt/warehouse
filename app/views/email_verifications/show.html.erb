@@ -1,0 +1,7 @@
+<h1>Подтверждение почты</h1>
+<p>Нажмите кнопку, чтобы подтвердить адрес электронной почты.</p>
+
+<%= form_with url: email_verification_path, method: :post do |form| %>
+  <%= form.hidden_field :token, value: @token %>
+  <%= form.submit "Подтвердить почту" %>
+<% end %>

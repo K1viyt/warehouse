@@ -2,7 +2,7 @@ require "test_helper"
 
 class SessionsTest < ActionDispatch::IntegrationTest
   test "authenticates pending user" do
-    user = User.create!(
+    user = create_user(
       name: "Vladislav",
       email_address: "vlad@exampl1.com",
       password: "secret123",
@@ -25,7 +25,7 @@ class SessionsTest < ActionDispatch::IntegrationTest
   end
 
   test "rejects invalid password" do
-    User.create!(
+    create_user(
       name: "Vladislav",
       email_address: "vlad@exampl1.com",
       password: "secret123",
@@ -47,7 +47,7 @@ class SessionsTest < ActionDispatch::IntegrationTest
   end
 
   test "rejects blocked user" do
-    User.create!(
+    create_user(
       name: "Vladislav",
       email_address: "vlad@exampl1.com",
       password: "secret123",
@@ -70,7 +70,7 @@ class SessionsTest < ActionDispatch::IntegrationTest
   end
 
   test "logs out authenticated user" do
-    User.create!(
+    create_user(
       name: "Vladislav",
       email_address: "vlad@exampl1.com",
       password: "secret123",
@@ -96,7 +96,7 @@ class SessionsTest < ActionDispatch::IntegrationTest
   end
 
   test "normalizes email before authentication" do
-    user = User.create!(
+    user = create_user(
       name: "Vladislav",
       email_address: "vlad@example.com",
       password: "secret123",

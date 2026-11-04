@@ -18,7 +18,7 @@ class WorkspaceTest < ActionDispatch::IntegrationTest
 
   test "browser CSRF token permits login and refreshed token permits product creation" do
     with_forgery_protection do
-      user = User.create!(name: "Browser Operator", email_address: "browser@example.test",
+      user = create_user(name: "Browser Operator", email_address: "browser@example.test",
         password: "browser-password", status: "active")
       get "/"
       token = csrf_token
@@ -58,7 +58,7 @@ class WorkspaceTest < ActionDispatch::IntegrationTest
 
   test "CSRF endpoint refreshes the token after a session is reset" do
     with_forgery_protection do
-      User.create!(name: "Token Operator", email_address: "token@example.test",
+      create_user(name: "Token Operator", email_address: "token@example.test",
         password: "browser-password", status: "active")
       get "/interface/csrf", as: :json
       assert_response :ok

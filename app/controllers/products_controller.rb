@@ -1,20 +1,30 @@
 class ProductsController < ApplicationController
    before_action :require_active_user
   def index
-    products = Product.all
+    products = current_organization.products
     render json: products
   end
 
   def show
-    product = Product.find(params[:id])
+    product = current_organization.products.find_by(id: params[:id])
+    return render json: { error: "Product not found" }, status: :not_found unless product
     render json: product
   end
   def create
     attributes = params.expect(product: [ :sku, :name, :unit ])
 
-    product = Product.new(attributes)
+    product = current_organization.products.new(attributes)
+    warehouses = current_user.accessible_warehouses
+    warehouse = if params[:warehouse_id].present?
+      warehouses.find_by(id: params[:warehouse_id])
+    elsif warehouses.limit(2).count == 1
+      warehouses.first
+    end
+    unless warehouse
+      return render json: { errors: [ "Select an accessible warehouse" ] }, status: :unprocessable_entity
+    end
     # Транзакция
-    ProductCreation.call(product)
+    ProductCreation.call(product, warehouse: warehouse)
     render json: product, status: :created
   rescue ActiveRecord::RecordInvalid => error
         render json: { errors: error.record.errors.full_messages },

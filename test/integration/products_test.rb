@@ -25,7 +25,7 @@ class ProductsTest < ActionDispatch::IntegrationTest
     assert_equal balances_before + 1, StockBalance.count
     assert_response :created
     saved_product = Product.find_by!(sku: "TEST-002")
-    assert_equal 0, saved_product.stock_balance.quantity
+    assert_equal 0, saved_product.stock_balances.find_by!(warehouse: warehouses(:one)).quantity
   end
   test "requires authentication" do
   get "/products"
@@ -35,7 +35,7 @@ class ProductsTest < ActionDispatch::IntegrationTest
   end
 
   test "rejects pending user" do
-  User.create!(
+  create_user(
     name: "Pending Operator",
     email_address: "operator@example.com",
     password: "secret123",
@@ -56,7 +56,7 @@ class ProductsTest < ActionDispatch::IntegrationTest
 end
 
 test "rejects blocked user with existing session" do
-  user = User.create!(name: "Blocked Operator",
+  user = create_user(name: "Blocked Operator",
     email_address: "operator@example.com",
     password: "secret123",
     password_confirmation: "secret123",
@@ -83,7 +83,7 @@ end
   private
 
 def sign_in_active_user
-  User.create!(
+  create_user(
     name: "Active Operator",
     email_address: "operator@example.com",
     password: "secret123",
