@@ -33,8 +33,8 @@ class RegistrationOptionsTest < ActionDispatch::IntegrationTest
         item["id"]== other_organization.id
       end
       assert_not_nil other_data
-      assert_equal [ other_organization.id ], other_data["warehouses"].map { |warehouse|
-    warehouse["id"]}
+    assert_equal [ other_warehouse.id ],
+             other_data["warehouses"].map { |warehouse| warehouse["id"] }
     # Возврат разрешенных полей
     assert_equal [ "id", "name", "warehouses" ].sort, organization_data.keys.sort
     warehouse_data = organization_data["warehouses"].first
