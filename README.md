@@ -1,24 +1,18 @@
-# README
+# СЕКЦИЯ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+React-клиент и Rails API работают на одном адресе. Rails отдаёт собранный интерфейс и использует существующие сессии и CSRF-защиту.
 
-Things you may want to cover:
+## Запуск интерфейса
 
-* Ruby version
+В корне проекта, с Node.js 22.12+ и настроенным подключением Rails к PostgreSQL:
 
-* System dependencies
+```sh
+npm --prefix frontend ci
+npm --prefix frontend run build
+bin/rails db:migrate
+bin/rails server
+```
 
-* Configuration
+Откройте http://localhost:3000. При разработке `npm --prefix frontend run dev` пересобирает клиент при изменении исходников. Обновите страницу в браузере, чтобы увидеть правки.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Dockerfile собирает React на этапе сборки образа. Фото товаров хранятся через Active Storage. При использовании локального диска в контейнере подключите постоянный том к `/rails/storage`.

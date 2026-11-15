@@ -30,3 +30,5 @@
 
 /public/assets
 /config/master.key
+/frontend/node_modules/
+/public/workspace-ui/

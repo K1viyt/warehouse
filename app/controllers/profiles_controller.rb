@@ -9,7 +9,10 @@ class ProfilesController < ApplicationController
         name: user.name,
         email_address: user.email_address,
         role: user.role,
-        status: user.status
+        status: user.status,
+        email_verified: user.email_verified?,
+        organization: user.organization.as_json(only: [ :id, :name ]),
+        warehouses: user.active? ? user.accessible_warehouses.order(:name).as_json(only: [ :id, :name ]) : []
       }, status: :ok
     else
       render json: {

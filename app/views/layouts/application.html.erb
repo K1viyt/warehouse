@@ -17,8 +17,11 @@
     <link rel="icon" href="/section.svg" type="image/svg+xml">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag "section_fonts", "section_base", "section_auth", "section_workspace", "section_responsive", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "section_fonts" %>
+    <% unless content_for?(:react_workspace) %>
+      <%= stylesheet_link_tag "section_base", "section_auth", "section_workspace", "section_responsive", "data-turbo-track": "reload" %>
+      <%= javascript_importmap_tags %>
+    <% end %>
   </head>
 
   <body>

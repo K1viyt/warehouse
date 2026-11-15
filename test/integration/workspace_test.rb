@@ -6,10 +6,7 @@ class WorkspaceTest < ActionDispatch::IntegrationTest
     assert_response :ok
     assert_select "html[lang=ru]"
     assert_select "meta[name=viewport]"
-    assert_select "[data-controller=workspace]"
-    assert_select "template form[data-turbo=false]", count: 3
-    assert_select "select[name=unit] option[value='шт']", text: "шт — штуки"
-    assert_select "select[name=unit] option[value='кг']", text: "кг — килограммы"
+    assert_select "#workspace-root[data-images]"
 
     get "/products", as: :json
     assert_response :unauthorized

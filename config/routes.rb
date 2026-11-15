@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get "products" => "products#index"
   get "products/:id" => "products#show"
+  get "products/:id/photo", to: "products#photo", as: :product_photo
+  put "products/:id/photo", to: "products#update_photo"
   post "products" => "products#create"
   post "registrations" => "registrations#create"
   post "session" => "sessions#create"

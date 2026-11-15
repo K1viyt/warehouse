@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  has_one_attached :photo
     belongs_to :organization
    validates :name, presence: true
     validates :sku, presence: true, uniqueness: { scope: :organization_id }
