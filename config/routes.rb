@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get "email_verification", to: "email_verifications#show", as: :email_verification
   post "email_verification", to: "email_verifications#create"
   post "email_verification/resend", to: "email_verifications#resend"
+  post "/warehouses/:warehouse_id/stock_issues", to: "stock_movements#create"
 
   namespace :admin do
     get "users/pending", to: "users#pending"
