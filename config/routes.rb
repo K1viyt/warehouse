@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "workspace#show"
+  get "interface/csrf", to: "workspace#csrf"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -7,11 +9,19 @@ Rails.application.routes.draw do
 
   get "products" => "products#index"
   get "products/:id" => "products#show"
+  get "products/:id/photo", to: "products#photo", as: :product_photo
+  put "products/:id/photo", to: "products#update_photo"
   post "products" => "products#create"
   post "registrations" => "registrations#create"
   post "session" => "sessions#create"
   get "me" => "profiles#show"
   delete "session" => "sessions#destroy"
+  get "registration_options", to: "registration_options#index"
+  get "email_verification", to: "email_verifications#show", as: :email_verification
+  post "email_verification", to: "email_verifications#create"
+  post "email_verification/resend", to: "email_verifications#resend"
+  post "/warehouses/:warehouse_id/stock_issues", to: "stock_movements#create"
+
   namespace :admin do
     get "users/pending", to: "users#pending"
     patch "users/:id/activate", to: "users#activate"

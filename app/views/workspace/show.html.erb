@@ -1,0 +1,18 @@
+<% content_for :title, "СЕКЦИЯ — складское пространство" %>
+<% content_for :react_workspace, "true" %>
+<% if @workspace_bundle %>
+  <% content_for :head do %>
+    <% @workspace_bundle.fetch("css", []).each do |path| %>
+      <%= tag.link rel: "stylesheet", href: "/workspace-ui/#{path}" %>
+    <% end %>
+    <%= tag.script type: "module", src: "/workspace-ui/#{@workspace_bundle.fetch("file")}" %>
+  <% end %>
+<% end %>
+<% images = %w[warehouse material bolt dowel screw].index_with { |name| asset_path("section/#{name}.webp") } %>
+<%= tag.div id: "workspace-root", data: { images: images.to_json } do %>
+  <% if @workspace_bundle %>
+    <noscript>Включите JavaScript, чтобы открыть рабочее пространство.</noscript>
+  <% else %>
+    <p>Интерфейс ещё не собран. В папке frontend выполните npm ci и npm run build.</p>
+  <% end %>
+<% end %>

@@ -1,0 +1,111 @@
+{
+  "exported_on": "2026-10-15",
+  "source": "https://www.figma.com/design/fRy4i8gmJo8H882xNO2Mld",
+  "native_fig": true,
+  "pdf_pages": 9,
+  "png_origin": "Rendered from official Figma PDF export at 96 dpi",
+  "screens": [
+    {
+      "page": 1,
+      "title": "Каталог — карточки",
+      "png": "png/screen-1.png"
+    },
+    {
+      "page": 2,
+      "title": "Каталог — таблица",
+      "png": "png/screen-2.png"
+    },
+    {
+      "page": 3,
+      "title": "Карточка товара",
+      "png": "png/screen-3.png"
+    },
+    {
+      "page": 4,
+      "title": "Создание товара — ошибка",
+      "png": "png/screen-4.png"
+    },
+    {
+      "page": 5,
+      "title": "Пользователи администратора",
+      "png": "png/screen-5.png"
+    },
+    {
+      "page": 6,
+      "title": "Вход",
+      "png": "png/screen-6.png"
+    },
+    {
+      "page": 7,
+      "title": "Регистрация",
+      "png": "png/screen-7.png"
+    },
+    {
+      "page": 8,
+      "title": "Ожидание активации",
+      "png": "png/screen-8.png"
+    },
+    {
+      "page": 9,
+      "title": "Каталог — узкий экран",
+      "png": "png/screen-9.png"
+    }
+  ],
+  "files": [
+    {
+      "file": "section-design.fig",
+      "bytes": 973106,
+      "sha256": "b17d00cbdcd02b895ee43248d4c5d57880c9d98dd20c9f90fec07835621422bc"
+    },
+    {
+      "file": "section-design.pdf",
+      "bytes": 12132606,
+      "sha256": "19f5cbf1cd8759098ba25b40ba15793c8d4d9513bf93d6ac9b90724926b47f80"
+    },
+    {
+      "file": "png/screen-1.png",
+      "bytes": 933545,
+      "sha256": "af7007e4f0ad61fc9b63b5c6038669588e63691504ef1c23bc2f940d25b639d2"
+    },
+    {
+      "file": "png/screen-2.png",
+      "bytes": 51623,
+      "sha256": "f9313050163c9ab8944755dc67c9bcdf0436d34460e0011ac98be2a205321bc4"
+    },
+    {
+      "file": "png/screen-3.png",
+      "bytes": 900072,
+      "sha256": "f232e7922c27db14e10b9a49b70591bd7ab38f0d89d7aaaf7b0b88d4a7464865"
+    },
+    {
+      "file": "png/screen-4.png",
+      "bytes": 56104,
+      "sha256": "17723cea2b00b2bd33f4d88ecbc8a06b89e0d18f04d5b2b117788ee5e5f72bb6"
+    },
+    {
+      "file": "png/screen-5.png",
+      "bytes": 69344,
+      "sha256": "d06265a2c298077e5df3fa38002b41fbe2e5095bb2fd7e052d3f3b9142148815"
+    },
+    {
+      "file": "png/screen-6.png",
+      "bytes": 607650,
+      "sha256": "c9cdf5dba6c5be8ed4d3e405f7a2dbc4ff2f35ab17c72a73a1af685fcbd9ac17"
+    },
+    {
+      "file": "png/screen-7.png",
+      "bytes": 612112,
+      "sha256": "6b893e4c28659a31261c620e9b7b8e9be6e374e09682d249023e24283efd5254"
+    },
+    {
+      "file": "png/screen-8.png",
+      "bytes": 614861,
+      "sha256": "dfad214daff95dc3714103e7536a8464dd0a52faac9418036cc7610ab0794a3f"
+    },
+    {
+      "file": "png/screen-9.png",
+      "bytes": 443716,
+      "sha256": "73709145b33f3e88026a1c0aa6cd2b91325c8fceca0118b9225291306248e742"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "date": "29.10.2026",
+  "revision": "5fa8680",
+  "pages": 14,
+  "requirements": 70,
+  "status_counts": {
+    "green": 7,
+    "yellow": 14,
+    "red": 49
+  },
+  "open_decisions": 6,
+  "pdf_text_overflows": 0,
+  "pdf_generation": "Shared content and geometry with Draw.io; rendered with PyMuPDF",
+  "drawio_native_render": "Not available: desktop executable absent"
+}

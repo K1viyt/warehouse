@@ -10,6 +10,12 @@ module ActiveSupport
     # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
     fixtures :all
 
-    # Add more helper methods to be used by all tests here...
+    # Explicit fixture context keeps tests independent of migration-generated IDs.
+    def create_user(**attributes)
+      user = User.create!(organization: organizations(:one), **attributes)
+      user.warehouse_memberships.create!(organization: user.organization,
+        warehouse: warehouses(:one), status: user.status) unless user.admin?
+      user
+    end
   end
 end

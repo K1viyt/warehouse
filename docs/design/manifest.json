@@ -1,0 +1,98 @@
+{
+  "source": "https://www.figma.com/design/fRy4i8gmJo8H882xNO2Mld",
+  "captured_at": "2026-10-15",
+  "revision": "early concept before photographic imagery update",
+  "native_fig_exported": false,
+  "screens": [
+    {
+      "file": "concept-png/01-login.png",
+      "title": "Вход",
+      "node_id": "2:234",
+      "dimensions": [
+        900,
+        563
+      ],
+      "sha256": "b2ad1ba3343e981e48c23c7da378a6482548f21731d8355427dc201517fef396"
+    },
+    {
+      "file": "concept-png/02-registration.png",
+      "title": "Регистрация",
+      "node_id": null,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "062f45fd48521608084c390ec2416161b259a219154d7d879209e4b139229711"
+    },
+    {
+      "file": "concept-png/03-pending.png",
+      "title": "Ожидание активации",
+      "node_id": "2:295",
+      "dimensions": [
+        900,
+        563
+      ],
+      "sha256": "dd260794f4c70a4deedfdb88349e1c4234a29e9f80f02e2fdc241f692cfd9a9a"
+    },
+    {
+      "file": "concept-png/04-catalog-cards.png",
+      "title": "Каталог: карточки",
+      "node_id": null,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "30e4927d9e5fca70066e52444e8fa99eff036ef2a9318452c371cb7c102c2b25"
+    },
+    {
+      "file": "concept-png/05-catalog-table.png",
+      "title": "Каталог: таблица",
+      "node_id": "2:67",
+      "dimensions": [
+        900,
+        563
+      ],
+      "sha256": "b0d89b4622a00692e35941dc77da25f70392d9070531ef7dd78b0c979b40f013"
+    },
+    {
+      "file": "concept-png/06-product-detail.png",
+      "title": "Карточка товара",
+      "node_id": "2:110",
+      "dimensions": [
+        900,
+        563
+      ],
+      "sha256": "f8eb50b471c4ced2dece5818130cd02f3a1123d572f4af5698b3cc68ec10a4a4"
+    },
+    {
+      "file": "concept-png/07-product-create-error.png",
+      "title": "Создание товара: ошибка артикула",
+      "node_id": "2:144",
+      "dimensions": [
+        900,
+        563
+      ],
+      "sha256": "6ac47e4d43c7f3261b99b8007c1275808d5b1ecfd813b9283df18779efc9a4ac"
+    },
+    {
+      "file": "concept-png/08-admin-users.png",
+      "title": "Управление пользователями",
+      "node_id": "2:180",
+      "dimensions": [
+        900,
+        563
+      ],
+      "sha256": "1ae86931e77d2c612df66ad4121660e6e0b709c7cb6f6c21711b85082fdc4570"
+    },
+    {
+      "file": "concept-png/09-mobile-catalog.png",
+      "title": "Каталог на узком экране",
+      "node_id": "2:316",
+      "dimensions": [
+        338,
+        900
+      ],
+      "sha256": "b8269ce9ec4e48670f9d87e7d197baaae0239e5f8a084a2174ffd1d5330983a6"
+    }
+  ]
+}

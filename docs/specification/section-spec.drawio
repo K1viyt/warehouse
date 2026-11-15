@@ -1,0 +1,1865 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="32.4.1" pages="9">
+  <diagram id="map" name="00 · Всё ТЗ">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1600" pageHeight="1900" background="#F3EFE7" fold="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject id="map-brand" label="СЕКЦИЯ / КАРТА ФУНКЦИЙ">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;fillColor=#202320;strokeColor=none;fontColor=#F3EFE7;fontSize=15;align=left;spacingLeft=18;fontStyle=1;">
+            <mxGeometry x="60" y="30" width="1100" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-title" label="Склад «СЕКЦИЯ» — что делает система">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=32;fontStyle=1;">
+            <mxGeometry x="60" y="100" width="1480" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-sub" label="Один склад: доступ → каталог → учёт материалов → история изменений">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="60" y="165" width="1480" height="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-legend-green" label="Полностью готово">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;fontColor=#24804A;fontSize=16;fontStyle=1;">
+            <mxGeometry x="60" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-legend-yellow" label="Начато, но не завершено">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;fontColor=#B58212;fontSize=16;fontStyle=1;">
+            <mxGeometry x="560" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-legend-red" label="Ещё не реализовано">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;fontColor=#BB3E37;fontSize=16;fontStyle=1;">
+            <mxGeometry x="1060" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-date" label="Состояние реализации · 15 октября 2026">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=13;fontStyle=0;">
+            <mxGeometry x="60" y="1845" width="1480" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="warehouse" label="СЕКЦИЯ&lt;br&gt;&lt;b&gt;Управление складом&lt;/b&gt;">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#202320;strokeColor=none;fontColor=#FFFFFF;fontSize=24;spacing=16;">
+            <mxGeometry x="60" y="920" width="300" height="140" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-access" label="01 / Доступ в систему">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=1;fillColor=#FFF0BC;swimlaneFillColor=#FFFDFA;strokeColor=#B58212;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="320" width="1000" height="155" as="geometry">
+              <mxRectangle x="540" y="320" width="1000" height="48" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-access-status" label="&lt;font color=&quot;#B58212&quot;&gt;НАЧАТО&lt;/font&gt;">
+          <mxCell vertex="1" parent="map-access" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-access-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Заявка, вход, личный профиль и защита доступа&lt;/div&gt;">
+          <mxCell vertex="1" parent="map-access" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-access-open" label="&lt;b&gt;Подробнее →&lt;/b&gt;" link="data:page/id,access">
+          <mxCell vertex="1" parent="map-access" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=16;fontStyle=0;">
+            <mxGeometry x="24" y="121" width="952" height="26" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="map-edge-access" edge="1" parent="1" source="warehouse" target="map-access" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="990" />
+              <mxPoint x="440" y="398" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="map-administration" label="02 / Управление пользователями">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=1;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="500" width="1000" height="155" as="geometry">
+              <mxRectangle x="540" y="500" width="1000" height="48" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-administration-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="map-administration" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-administration-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Рабочее место администратора и решения по заявкам&lt;/div&gt;">
+          <mxCell vertex="1" parent="map-administration" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-administration-open" label="&lt;b&gt;Подробнее →&lt;/b&gt;" link="data:page/id,administration">
+          <mxCell vertex="1" parent="map-administration" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=16;fontStyle=0;">
+            <mxGeometry x="24" y="121" width="952" height="26" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="map-edge-administration" edge="1" parent="1" source="warehouse" target="map-administration" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="990" />
+              <mxPoint x="440" y="578" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="map-catalog" label="03 / Каталог материалов">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=1;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="680" width="1000" height="155" as="geometry">
+              <mxRectangle x="540" y="680" width="1000" height="48" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-catalog-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="map-catalog" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-catalog-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Просмотр, создание и проверка карточек товаров&lt;/div&gt;">
+          <mxCell vertex="1" parent="map-catalog" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-catalog-open" label="&lt;b&gt;Подробнее →&lt;/b&gt;" link="data:page/id,catalog">
+          <mxCell vertex="1" parent="map-catalog" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=16;fontStyle=0;">
+            <mxGeometry x="24" y="121" width="952" height="26" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="map-edge-catalog" edge="1" parent="1" source="warehouse" target="map-catalog" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="990" />
+              <mxPoint x="440" y="758" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="map-balances" label="04 / Остатки на складе">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=1;fillColor=#FFF0BC;swimlaneFillColor=#FFFDFA;strokeColor=#B58212;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="860" width="1000" height="155" as="geometry">
+              <mxRectangle x="540" y="860" width="1000" height="48" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-balances-status" label="&lt;font color=&quot;#B58212&quot;&gt;НАЧАТО&lt;/font&gt;">
+          <mxCell vertex="1" parent="map-balances" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-balances-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Сколько материала доступно для работы&lt;/div&gt;">
+          <mxCell vertex="1" parent="map-balances" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-balances-open" label="&lt;b&gt;Подробнее →&lt;/b&gt;" link="data:page/id,balances">
+          <mxCell vertex="1" parent="map-balances" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=16;fontStyle=0;">
+            <mxGeometry x="24" y="121" width="952" height="26" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="map-edge-balances" edge="1" parent="1" source="warehouse" target="map-balances" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="990" />
+              <mxPoint x="440" y="938" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="map-receipt" label="05 / Приход материалов">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=1;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1040" width="1000" height="155" as="geometry">
+              <mxRectangle x="540" y="1040" width="1000" height="48" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-receipt-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="map-receipt" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-receipt-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Увеличение остатка и фиксация поступления&lt;/div&gt;">
+          <mxCell vertex="1" parent="map-receipt" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-receipt-open" label="&lt;b&gt;Подробнее →&lt;/b&gt;" link="data:page/id,receipt">
+          <mxCell vertex="1" parent="map-receipt" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=16;fontStyle=0;">
+            <mxGeometry x="24" y="121" width="952" height="26" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="map-edge-receipt" edge="1" parent="1" source="warehouse" target="map-receipt" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="990" />
+              <mxPoint x="440" y="1118" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="map-issue" label="06 / Списание материалов">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=1;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1220" width="1000" height="155" as="geometry">
+              <mxRectangle x="540" y="1220" width="1000" height="48" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-issue-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="map-issue" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-issue-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Выдача материала без ухода остатка в минус&lt;/div&gt;">
+          <mxCell vertex="1" parent="map-issue" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-issue-open" label="&lt;b&gt;Подробнее →&lt;/b&gt;" link="data:page/id,issue">
+          <mxCell vertex="1" parent="map-issue" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=16;fontStyle=0;">
+            <mxGeometry x="24" y="121" width="952" height="26" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="map-edge-issue" edge="1" parent="1" source="warehouse" target="map-issue" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="990" />
+              <mxPoint x="440" y="1298" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="map-history" label="07 / История и исправления">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=1;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1400" width="1000" height="155" as="geometry">
+              <mxRectangle x="540" y="1400" width="1000" height="48" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-history-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="map-history" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-history-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Прозрачность прихода, списания и текущего остатка&lt;/div&gt;">
+          <mxCell vertex="1" parent="map-history" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-history-open" label="&lt;b&gt;Подробнее →&lt;/b&gt;" link="data:page/id,history">
+          <mxCell vertex="1" parent="map-history" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=16;fontStyle=0;">
+            <mxGeometry x="24" y="121" width="952" height="26" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="map-edge-history" edge="1" parent="1" source="warehouse" target="map-history" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="990" />
+              <mxPoint x="440" y="1478" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="map-interface" label="08 / Внешний вид и удобство">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=1;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1580" width="1000" height="155" as="geometry">
+              <mxRectangle x="540" y="1580" width="1000" height="48" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-interface-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="map-interface" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-interface-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Понятная работа с доступными функциями&lt;/div&gt;">
+          <mxCell vertex="1" parent="map-interface" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="map-interface-open" label="&lt;b&gt;Подробнее →&lt;/b&gt;" link="data:page/id,interface">
+          <mxCell vertex="1" parent="map-interface" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=16;fontStyle=0;">
+            <mxGeometry x="24" y="121" width="952" height="26" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="map-edge-interface" edge="1" parent="1" source="warehouse" target="map-interface" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="990" />
+              <mxPoint x="440" y="1658" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="access" name="01 · Доступ в систему">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1600" pageHeight="1820" background="#F3EFE7" fold="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject id="access-brand" label="СЕКЦИЯ / КАРТА ФУНКЦИЙ">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;fillColor=#202320;strokeColor=none;fontColor=#F3EFE7;fontSize=15;align=left;spacingLeft=18;fontStyle=1;">
+            <mxGeometry x="60" y="30" width="1100" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-back" label="← Все разделы" link="data:page/id,map">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#202320;strokeColor=none;fontColor=#FFFFFF;fontSize=15;">
+            <mxGeometry x="1260" y="30" width="280" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-title" label="Доступ в систему">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=32;fontStyle=1;">
+            <mxGeometry x="60" y="100" width="1480" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-sub" label="Заявка, вход, личный профиль и защита доступа">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="60" y="165" width="1480" height="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-legend-green" label="Полностью готово">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;fontColor=#24804A;fontSize=16;fontStyle=1;">
+            <mxGeometry x="60" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-legend-yellow" label="Начато, но не завершено">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;fontColor=#B58212;fontSize=16;fontStyle=1;">
+            <mxGeometry x="560" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-legend-red" label="Ещё не реализовано">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;fontColor=#BB3E37;fontSize=16;fontStyle=1;">
+            <mxGeometry x="1060" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-date" label="Состояние реализации · 15 октября 2026">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=13;fontStyle=0;">
+            <mxGeometry x="60" y="1765" width="1480" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-root" label="Доступ в систему&lt;br&gt;&lt;b&gt;НАЧАТО&lt;/b&gt;">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;strokeWidth=2;fontColor=#202320;fontSize=23;spacing=16;">
+            <mxGeometry x="60" y="975.0" width="300" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-1" label="Регистрация">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="320" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-1-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="access-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-1-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Пользователь указывает имя, почту и пароль, подтверждает пароль. После отправки видит, что заявка принята.&lt;/div&gt;">
+          <mxCell vertex="1" parent="access-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="access-edge-1" edge="1" parent="1" source="access-root" target="access-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1050.0" />
+              <mxPoint x="440" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="access-2" label="Ожидание активации">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="495" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-2-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="access-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-2-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Новая учётная запись ожидает решения администратора. До активации каталог и рабочие действия недоступны.&lt;/div&gt;">
+          <mxCell vertex="1" parent="access-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="access-edge-2" edge="1" parent="1" source="access-root" target="access-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1050.0" />
+              <mxPoint x="440" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="access-3" label="Повторная почта">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="670" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-3-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="access-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-3-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Пользователь с уже занятой почтой не создаётся. Разный регистр букв и пробелы по краям не позволяют обойти проверку.&lt;/div&gt;">
+          <mxCell vertex="1" parent="access-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="access-edge-3" edge="1" parent="1" source="access-root" target="access-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1050.0" />
+              <mxPoint x="440" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="access-4" label="Вход и выход">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="845" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-4-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="access-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-4-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Пользователь входит по почте и паролю и может завершить сеанс. Неверные данные сопровождаются понятным сообщением.&lt;/div&gt;">
+          <mxCell vertex="1" parent="access-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="access-edge-4" edge="1" parent="1" source="access-root" target="access-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1050.0" />
+              <mxPoint x="440" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="access-5" label="Личный профиль">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1020" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-5-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="access-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-5-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Пользователь видит своё имя, почту, роль и состояние доступа. Эти сведения соответствуют его учётной записи.&lt;/div&gt;">
+          <mxCell vertex="1" parent="access-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="access-edge-5" edge="1" parent="1" source="access-root" target="access-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1050.0" />
+              <mxPoint x="440" y="1095" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="access-6" label="Ограничение прав">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1195" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-6-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="access-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-6-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Оператор не управляет пользователями. Заблокированный пользователь не может продолжить работу со складом.&lt;/div&gt;">
+          <mxCell vertex="1" parent="access-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="access-edge-6" edge="1" parent="1" source="access-root" target="access-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1050.0" />
+              <mxPoint x="440" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="access-7" label="Проверка формата почты">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#FFF0BC;swimlaneFillColor=#FFFDFA;strokeColor=#B58212;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1370" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-7-status" label="&lt;font color=&quot;#B58212&quot;&gt;НАЧАТО&lt;/font&gt;">
+          <mxCell vertex="1" parent="access-7" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-7-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Форма проверяет формат адреса. Единая проверка на стороне системы ещё не завершена; её нужно обеспечить для любого способа отправки заявки.&lt;/div&gt;">
+          <mxCell vertex="1" parent="access-7" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="access-edge-7" edge="1" parent="1" source="access-root" target="access-7" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1050.0" />
+              <mxPoint x="440" y="1445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="access-8" label="Одновременные одинаковые заявки">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#FFF0BC;swimlaneFillColor=#FFFDFA;strokeColor=#B58212;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1545" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-8-status" label="&lt;font color=&quot;#B58212&quot;&gt;НАЧАТО&lt;/font&gt;">
+          <mxCell vertex="1" parent="access-8" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="access-8-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Две одинаковые учётные записи сохранить нельзя. Понятный отказ при одновременной регистрации одной почты ещё требует доработки.&lt;/div&gt;">
+          <mxCell vertex="1" parent="access-8" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="access-edge-8" edge="1" parent="1" source="access-root" target="access-8" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1050.0" />
+              <mxPoint x="440" y="1620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="administration" name="02 · Управление пользователями">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1600" pageHeight="1470" background="#F3EFE7" fold="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject id="administration-brand" label="СЕКЦИЯ / КАРТА ФУНКЦИЙ">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;fillColor=#202320;strokeColor=none;fontColor=#F3EFE7;fontSize=15;align=left;spacingLeft=18;fontStyle=1;">
+            <mxGeometry x="60" y="30" width="1100" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-back" label="← Все разделы" link="data:page/id,map">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#202320;strokeColor=none;fontColor=#FFFFFF;fontSize=15;">
+            <mxGeometry x="1260" y="30" width="280" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-title" label="Управление пользователями">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=32;fontStyle=1;">
+            <mxGeometry x="60" y="100" width="1480" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-sub" label="Рабочее место администратора и решения по заявкам">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="60" y="165" width="1480" height="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-legend-green" label="Полностью готово">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;fontColor=#24804A;fontSize=16;fontStyle=1;">
+            <mxGeometry x="60" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-legend-yellow" label="Начато, но не завершено">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;fontColor=#B58212;fontSize=16;fontStyle=1;">
+            <mxGeometry x="560" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-legend-red" label="Ещё не реализовано">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;fontColor=#BB3E37;fontSize=16;fontStyle=1;">
+            <mxGeometry x="1060" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-date" label="Состояние реализации · 15 октября 2026">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=13;fontStyle=0;">
+            <mxGeometry x="60" y="1415" width="1480" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-root" label="Управление пользователями&lt;br&gt;&lt;b&gt;ГОТОВО&lt;/b&gt;">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;strokeWidth=2;fontColor=#202320;fontSize=23;spacing=16;">
+            <mxGeometry x="60" y="800.0" width="300" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-1" label="Список пользователей">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="320" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-1-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="administration-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-1-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Администратор видит имя, почту, роль, состояние доступа и дату регистрации пользователей.&lt;/div&gt;">
+          <mxCell vertex="1" parent="administration-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="administration-edge-1" edge="1" parent="1" source="administration-root" target="administration-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="administration-2" label="Отбор по состоянию">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="495" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-2-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="administration-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-2-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Можно отдельно посмотреть ожидающих активации, активных и заблокированных пользователей.&lt;/div&gt;">
+          <mxCell vertex="1" parent="administration-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="administration-edge-2" edge="1" parent="1" source="administration-root" target="administration-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="administration-3" label="Страницы списка">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="670" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-3-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="administration-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-3-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Длинный список разделён на страницы. Можно переходить вперёд и назад, сохраняя выбранный отбор.&lt;/div&gt;">
+          <mxCell vertex="1" parent="administration-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="administration-edge-3" edge="1" parent="1" source="administration-root" target="administration-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="administration-4" label="Активация заявки">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="845" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-4-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="administration-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-4-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Администратор активирует ожидающую заявку. После этого пользователь получает доступ к каталогу.&lt;/div&gt;">
+          <mxCell vertex="1" parent="administration-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="administration-edge-4" edge="1" parent="1" source="administration-root" target="administration-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="administration-5" label="Блокировка и восстановление">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1020" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-5-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="administration-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-5-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Администратор блокирует активного оператора и может восстановить его доступ. Блокировка действует и для уже открытого сеанса.&lt;/div&gt;">
+          <mxCell vertex="1" parent="administration-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="administration-edge-5" edge="1" parent="1" source="administration-root" target="administration-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1095" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="administration-6" label="Защита действий администратора">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1195" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-6-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="administration-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="administration-6-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Управление доступно только администратору. Недопустимый повтор действия не меняет состояние пользователя.&lt;/div&gt;">
+          <mxCell vertex="1" parent="administration-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="administration-edge-6" edge="1" parent="1" source="administration-root" target="administration-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="catalog" name="03 · Каталог материалов">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1600" pageHeight="1470" background="#F3EFE7" fold="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject id="catalog-brand" label="СЕКЦИЯ / КАРТА ФУНКЦИЙ">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;fillColor=#202320;strokeColor=none;fontColor=#F3EFE7;fontSize=15;align=left;spacingLeft=18;fontStyle=1;">
+            <mxGeometry x="60" y="30" width="1100" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-back" label="← Все разделы" link="data:page/id,map">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#202320;strokeColor=none;fontColor=#FFFFFF;fontSize=15;">
+            <mxGeometry x="1260" y="30" width="280" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-title" label="Каталог материалов">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=32;fontStyle=1;">
+            <mxGeometry x="60" y="100" width="1480" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-sub" label="Просмотр, создание и проверка карточек товаров">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="60" y="165" width="1480" height="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-legend-green" label="Полностью готово">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;fontColor=#24804A;fontSize=16;fontStyle=1;">
+            <mxGeometry x="60" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-legend-yellow" label="Начато, но не завершено">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;fontColor=#B58212;fontSize=16;fontStyle=1;">
+            <mxGeometry x="560" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-legend-red" label="Ещё не реализовано">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;fontColor=#BB3E37;fontSize=16;fontStyle=1;">
+            <mxGeometry x="1060" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-date" label="Состояние реализации · 15 октября 2026">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=13;fontStyle=0;">
+            <mxGeometry x="60" y="1415" width="1480" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-root" label="Каталог материалов&lt;br&gt;&lt;b&gt;ГОТОВО&lt;/b&gt;">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;strokeWidth=2;fontColor=#202320;fontSize=23;spacing=16;">
+            <mxGeometry x="60" y="800.0" width="300" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-1" label="Общий каталог">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="320" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-1-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="catalog-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-1-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Активные пользователи видят список материалов склада. Для каждой позиции показаны название, артикул и единица измерения.&lt;/div&gt;">
+          <mxCell vertex="1" parent="catalog-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="catalog-edge-1" edge="1" parent="1" source="catalog-root" target="catalog-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="catalog-2" label="Карточки и таблица">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="495" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-2-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="catalog-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-2-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Каталог можно просматривать карточками или таблицей. Оба представления показывают одни и те же товары.&lt;/div&gt;">
+          <mxCell vertex="1" parent="catalog-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="catalog-edge-2" edge="1" parent="1" source="catalog-root" target="catalog-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="catalog-3" label="Просмотр товара">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="670" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-3-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="catalog-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-3-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;По выбранной позиции открывается подробная карточка с её названием, артикулом и единицей измерения.&lt;/div&gt;">
+          <mxCell vertex="1" parent="catalog-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="catalog-edge-3" edge="1" parent="1" source="catalog-root" target="catalog-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="catalog-4" label="Создание товара">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="845" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-4-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="catalog-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-4-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Оператор или администратор добавляет название, артикул и единицу измерения. Созданный товар сохраняется и остаётся в каталоге после обновления страницы.&lt;/div&gt;">
+          <mxCell vertex="1" parent="catalog-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="catalog-edge-4" edge="1" parent="1" source="catalog-root" target="catalog-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="catalog-5" label="Обязательные поля и артикул">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1020" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-5-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="catalog-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-5-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Пустые название и артикул запрещены. Повторный артикул не создаёт второй товар; пользователь получает сообщение об ошибке.&lt;/div&gt;">
+          <mxCell vertex="1" parent="catalog-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="catalog-edge-5" edge="1" parent="1" source="catalog-root" target="catalog-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1095" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="catalog-6" label="Единицы измерения">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1195" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-6-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="catalog-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="catalog-6-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Разрешены только «шт» и «кг». Другие обозначения, например «г» или «т», не принимаются.&lt;/div&gt;">
+          <mxCell vertex="1" parent="catalog-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="catalog-edge-6" edge="1" parent="1" source="catalog-root" target="catalog-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="balances" name="04 · Остатки на складе">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1600" pageHeight="1470" background="#F3EFE7" fold="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject id="balances-brand" label="СЕКЦИЯ / КАРТА ФУНКЦИЙ">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;fillColor=#202320;strokeColor=none;fontColor=#F3EFE7;fontSize=15;align=left;spacingLeft=18;fontStyle=1;">
+            <mxGeometry x="60" y="30" width="1100" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-back" label="← Все разделы" link="data:page/id,map">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#202320;strokeColor=none;fontColor=#FFFFFF;fontSize=15;">
+            <mxGeometry x="1260" y="30" width="280" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-title" label="Остатки на складе">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=32;fontStyle=1;">
+            <mxGeometry x="60" y="100" width="1480" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-sub" label="Сколько материала доступно для работы">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="60" y="165" width="1480" height="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-legend-green" label="Полностью готово">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;fontColor=#24804A;fontSize=16;fontStyle=1;">
+            <mxGeometry x="60" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-legend-yellow" label="Начато, но не завершено">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;fontColor=#B58212;fontSize=16;fontStyle=1;">
+            <mxGeometry x="560" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-legend-red" label="Ещё не реализовано">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;fontColor=#BB3E37;fontSize=16;fontStyle=1;">
+            <mxGeometry x="1060" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-date" label="Состояние реализации · 15 октября 2026">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=13;fontStyle=0;">
+            <mxGeometry x="60" y="1415" width="1480" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-root" label="Остатки на складе&lt;br&gt;&lt;b&gt;НАЧАТО&lt;/b&gt;">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;strokeWidth=2;fontColor=#202320;fontSize=23;spacing=16;">
+            <mxGeometry x="60" y="800.0" width="300" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-1" label="Связь остатка с товаром">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="320" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-1-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="balances-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-1-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Подготовлено отдельное хранение количества для каждого товара. Остаток относится к конкретной позиции каталога.&lt;/div&gt;">
+          <mxCell vertex="1" parent="balances-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="balances-edge-1" edge="1" parent="1" source="balances-root" target="balances-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="balances-2" label="Неотрицательное количество">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="495" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-2-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="balances-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-2-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Подготовлено правило хранения: количество не может быть отрицательным. Нулевой остаток допустим.&lt;/div&gt;">
+          <mxCell vertex="1" parent="balances-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="balances-edge-2" edge="1" parent="1" source="balances-root" target="balances-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="balances-3" label="Точность количества">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="670" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-3-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="balances-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-3-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Подготовлено хранение количества с точностью до трёх знаков после запятой. Единица берётся из карточки товара.&lt;/div&gt;">
+          <mxCell vertex="1" parent="balances-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="balances-edge-3" edge="1" parent="1" source="balances-root" target="balances-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="balances-4" label="Остаток у каждого товара">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="845" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-4-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="balances-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-4-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;При создании товара должен автоматически появляться нулевой остаток. Для ранее добавленных позиций также нужно обеспечить наличие остатка.&lt;/div&gt;">
+          <mxCell vertex="1" parent="balances-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="balances-edge-4" edge="1" parent="1" source="balances-root" target="balances-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="balances-5" label="Просмотр доступного количества">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1020" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-5-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="balances-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-5-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;В каталоге и карточке товара пользователь должен видеть фактический остаток с единицей измерения.&lt;/div&gt;">
+          <mxCell vertex="1" parent="balances-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="balances-edge-5" edge="1" parent="1" source="balances-root" target="balances-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1095" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="balances-6" label="Актуальность после операции">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1195" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-6-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="balances-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="balances-6-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;После прихода или списания показанное количество должно обновляться и совпадать с сохранённым остатком.&lt;/div&gt;">
+          <mxCell vertex="1" parent="balances-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="balances-edge-6" edge="1" parent="1" source="balances-root" target="balances-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="receipt" name="05 · Приход материалов">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1600" pageHeight="1470" background="#F3EFE7" fold="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject id="receipt-brand" label="СЕКЦИЯ / КАРТА ФУНКЦИЙ">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;fillColor=#202320;strokeColor=none;fontColor=#F3EFE7;fontSize=15;align=left;spacingLeft=18;fontStyle=1;">
+            <mxGeometry x="60" y="30" width="1100" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-back" label="← Все разделы" link="data:page/id,map">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#202320;strokeColor=none;fontColor=#FFFFFF;fontSize=15;">
+            <mxGeometry x="1260" y="30" width="280" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-title" label="Приход материалов">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=32;fontStyle=1;">
+            <mxGeometry x="60" y="100" width="1480" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-sub" label="Увеличение остатка и фиксация поступления">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="60" y="165" width="1480" height="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-legend-green" label="Полностью готово">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;fontColor=#24804A;fontSize=16;fontStyle=1;">
+            <mxGeometry x="60" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-legend-yellow" label="Начато, но не завершено">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;fontColor=#B58212;fontSize=16;fontStyle=1;">
+            <mxGeometry x="560" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-legend-red" label="Ещё не реализовано">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;fontColor=#BB3E37;fontSize=16;fontStyle=1;">
+            <mxGeometry x="1060" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-date" label="Состояние реализации · 15 октября 2026">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=13;fontStyle=0;">
+            <mxGeometry x="60" y="1415" width="1480" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-root" label="Приход материалов&lt;br&gt;&lt;b&gt;НЕ РЕАЛИЗОВАНО&lt;/b&gt;">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;strokeWidth=2;fontColor=#202320;fontSize=23;spacing=16;">
+            <mxGeometry x="60" y="800.0" width="300" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-1" label="Выбор позиции">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="320" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-1-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="receipt-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-1-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Оператор выбирает существующий товар, по которому поступили материалы. Операция относится к одной позиции каталога.&lt;/div&gt;">
+          <mxCell vertex="1" parent="receipt-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="receipt-edge-1" edge="1" parent="1" source="receipt-root" target="receipt-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="receipt-2" label="Количество поступления">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="495" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-2-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="receipt-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-2-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Пользователь указывает количество больше нуля в единице выбранного товара. Пустое, нулевое и отрицательное значение не принимаются.&lt;/div&gt;">
+          <mxCell vertex="1" parent="receipt-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="receipt-edge-2" edge="1" parent="1" source="receipt-root" target="receipt-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="receipt-3" label="Основание поступления">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="670" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-3-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="receipt-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-3-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;В операции фиксируется, откуда поступил материал или на каком основании оформлен приход.&lt;/div&gt;">
+          <mxCell vertex="1" parent="receipt-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="receipt-edge-3" edge="1" parent="1" source="receipt-root" target="receipt-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="receipt-4" label="Обновление остатка">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="845" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-4-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="receipt-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-4-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Успешный приход увеличивает остаток ровно на указанное количество. Например: было 10 кг, поступило 2,5 кг — стало 12,5 кг.&lt;/div&gt;">
+          <mxCell vertex="1" parent="receipt-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="receipt-edge-4" edge="1" parent="1" source="receipt-root" target="receipt-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="receipt-5" label="Кто и когда выполнил приход">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1020" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-5-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="receipt-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-5-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Вместе с приходом сохраняются оператор, дата и время. Эти сведения определяются системой.&lt;/div&gt;">
+          <mxCell vertex="1" parent="receipt-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="receipt-edge-5" edge="1" parent="1" source="receipt-root" target="receipt-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1095" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="receipt-6" label="Защита от ошибок и повторов">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1195" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-6-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="receipt-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="receipt-6-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Если операцию не удалось завершить, количество не меняется. Повторная отправка той же операции не должна удваивать поступление.&lt;/div&gt;">
+          <mxCell vertex="1" parent="receipt-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="receipt-edge-6" edge="1" parent="1" source="receipt-root" target="receipt-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="issue" name="06 · Списание материалов">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1600" pageHeight="1470" background="#F3EFE7" fold="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject id="issue-brand" label="СЕКЦИЯ / КАРТА ФУНКЦИЙ">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;fillColor=#202320;strokeColor=none;fontColor=#F3EFE7;fontSize=15;align=left;spacingLeft=18;fontStyle=1;">
+            <mxGeometry x="60" y="30" width="1100" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-back" label="← Все разделы" link="data:page/id,map">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#202320;strokeColor=none;fontColor=#FFFFFF;fontSize=15;">
+            <mxGeometry x="1260" y="30" width="280" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-title" label="Списание материалов">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=32;fontStyle=1;">
+            <mxGeometry x="60" y="100" width="1480" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-sub" label="Выдача материала без ухода остатка в минус">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="60" y="165" width="1480" height="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-legend-green" label="Полностью готово">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;fontColor=#24804A;fontSize=16;fontStyle=1;">
+            <mxGeometry x="60" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-legend-yellow" label="Начато, но не завершено">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;fontColor=#B58212;fontSize=16;fontStyle=1;">
+            <mxGeometry x="560" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-legend-red" label="Ещё не реализовано">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;fontColor=#BB3E37;fontSize=16;fontStyle=1;">
+            <mxGeometry x="1060" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-date" label="Состояние реализации · 15 октября 2026">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=13;fontStyle=0;">
+            <mxGeometry x="60" y="1415" width="1480" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-root" label="Списание материалов&lt;br&gt;&lt;b&gt;НЕ РЕАЛИЗОВАНО&lt;/b&gt;">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;strokeWidth=2;fontColor=#202320;fontSize=23;spacing=16;">
+            <mxGeometry x="60" y="800.0" width="300" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-1" label="Товар и доступное количество">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="320" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-1-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="issue-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-1-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Оператор выбирает товар и видит, сколько материала сейчас доступно для списания.&lt;/div&gt;">
+          <mxCell vertex="1" parent="issue-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="issue-edge-1" edge="1" parent="1" source="issue-root" target="issue-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="issue-2" label="Количество и назначение">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="495" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-2-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="issue-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-2-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Пользователь вводит положительное количество и указывает, куда или на какое основание списывается материал.&lt;/div&gt;">
+          <mxCell vertex="1" parent="issue-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="issue-edge-2" edge="1" parent="1" source="issue-root" target="issue-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="issue-3" label="Проверка достаточности">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="670" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-3-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="issue-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-3-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Если запрошено больше, чем есть на складе, списание отклоняется. Пользователь видит доступное количество и может исправить ввод.&lt;/div&gt;">
+          <mxCell vertex="1" parent="issue-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="issue-edge-3" edge="1" parent="1" source="issue-root" target="issue-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="issue-4" label="Уменьшение остатка">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="845" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-4-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="issue-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-4-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;При успешном списании остаток уменьшается на указанное количество. Списание всего доступного количества оставляет нулевой остаток.&lt;/div&gt;">
+          <mxCell vertex="1" parent="issue-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="issue-edge-4" edge="1" parent="1" source="issue-root" target="issue-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="issue-5" label="Одновременная работа">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1020" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-5-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="issue-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-5-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Два оператора не могут списать один и тот же остаток сверх доступного количества. Итоговое количество всегда остаётся неотрицательным.&lt;/div&gt;">
+          <mxCell vertex="1" parent="issue-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="issue-edge-5" edge="1" parent="1" source="issue-root" target="issue-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1095" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="issue-6" label="Полная фиксация операции">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1195" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-6-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="issue-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="issue-6-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Количество и запись о списании сохраняются вместе. При ошибке ничего не меняется; повтор отправки не вызывает повторного списания.&lt;/div&gt;">
+          <mxCell vertex="1" parent="issue-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="issue-edge-6" edge="1" parent="1" source="issue-root" target="issue-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="history" name="07 · История и исправления">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1600" pageHeight="1470" background="#F3EFE7" fold="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject id="history-brand" label="СЕКЦИЯ / КАРТА ФУНКЦИЙ">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;fillColor=#202320;strokeColor=none;fontColor=#F3EFE7;fontSize=15;align=left;spacingLeft=18;fontStyle=1;">
+            <mxGeometry x="60" y="30" width="1100" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-back" label="← Все разделы" link="data:page/id,map">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#202320;strokeColor=none;fontColor=#FFFFFF;fontSize=15;">
+            <mxGeometry x="1260" y="30" width="280" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-title" label="История и исправления">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=32;fontStyle=1;">
+            <mxGeometry x="60" y="100" width="1480" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-sub" label="Прозрачность прихода, списания и текущего остатка">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="60" y="165" width="1480" height="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-legend-green" label="Полностью готово">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;fontColor=#24804A;fontSize=16;fontStyle=1;">
+            <mxGeometry x="60" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-legend-yellow" label="Начато, но не завершено">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;fontColor=#B58212;fontSize=16;fontStyle=1;">
+            <mxGeometry x="560" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-legend-red" label="Ещё не реализовано">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;fontColor=#BB3E37;fontSize=16;fontStyle=1;">
+            <mxGeometry x="1060" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-date" label="Состояние реализации · 15 октября 2026">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=13;fontStyle=0;">
+            <mxGeometry x="60" y="1415" width="1480" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-root" label="История и исправления&lt;br&gt;&lt;b&gt;НЕ РЕАЛИЗОВАНО&lt;/b&gt;">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;strokeWidth=2;fontColor=#202320;fontSize=23;spacing=16;">
+            <mxGeometry x="60" y="800.0" width="300" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-1" label="Общий журнал">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="320" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-1-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="history-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-1-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Пользователь видит выполненные поступления и списания: товар, количество, тип операции, оператора, дату и основание.&lt;/div&gt;">
+          <mxCell vertex="1" parent="history-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="history-edge-1" edge="1" parent="1" source="history-root" target="history-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="history-2" label="История конкретного товара">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="495" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-2-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="history-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-2-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Из карточки товара можно проследить, какие операции изменяли его количество.&lt;/div&gt;">
+          <mxCell vertex="1" parent="history-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="history-edge-2" edge="1" parent="1" source="history-root" target="history-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="history-3" label="Отбор и страницы журнала">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="670" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-3-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="history-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-3-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Историю можно просматривать по товару, периоду и типу операции. Большой журнал разделён на страницы.&lt;/div&gt;">
+          <mxCell vertex="1" parent="history-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="history-edge-3" edge="1" parent="1" source="history-root" target="history-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="history-4" label="Сохранение истории">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="845" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-4-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="history-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-4-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Завершённые операции не исчезают и не переписываются при обычной работе. Можно установить, кто и когда изменил остаток.&lt;/div&gt;">
+          <mxCell vertex="1" parent="history-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="history-edge-4" edge="1" parent="1" source="history-root" target="history-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="history-5" label="Исправление ошибочной операции">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1020" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-5-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="history-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-5-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Ошибка исправляется отдельной корректирующей записью с основанием. Исходная операция сохраняется в истории.&lt;/div&gt;">
+          <mxCell vertex="1" parent="history-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="history-edge-5" edge="1" parent="1" source="history-root" target="history-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1095" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="history-6" label="Объяснимый остаток">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#F8D8D5;swimlaneFillColor=#FFFDFA;strokeColor=#BB3E37;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1195" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-6-status" label="&lt;font color=&quot;#BB3E37&quot;&gt;НЕ РЕАЛИЗОВАНО&lt;/font&gt;">
+          <mxCell vertex="1" parent="history-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="history-6-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;История должна позволять восстановить изменение количества и объяснить текущий остаток товара.&lt;/div&gt;">
+          <mxCell vertex="1" parent="history-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="history-edge-6" edge="1" parent="1" source="history-root" target="history-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="interface" name="08 · Внешний вид и удобство">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1600" pageHeight="1470" background="#F3EFE7" fold="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject id="interface-brand" label="СЕКЦИЯ / КАРТА ФУНКЦИЙ">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;fillColor=#202320;strokeColor=none;fontColor=#F3EFE7;fontSize=15;align=left;spacingLeft=18;fontStyle=1;">
+            <mxGeometry x="60" y="30" width="1100" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-back" label="← Все разделы" link="data:page/id,map">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#202320;strokeColor=none;fontColor=#FFFFFF;fontSize=15;">
+            <mxGeometry x="1260" y="30" width="280" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-title" label="Внешний вид и удобство">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=32;fontStyle=1;">
+            <mxGeometry x="60" y="100" width="1480" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-sub" label="Понятная работа с доступными функциями">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="60" y="165" width="1480" height="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-legend-green" label="Полностью готово">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;fontColor=#24804A;fontSize=16;fontStyle=1;">
+            <mxGeometry x="60" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-legend-yellow" label="Начато, но не завершено">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#FFF0BC;strokeColor=#B58212;fontColor=#B58212;fontSize=16;fontStyle=1;">
+            <mxGeometry x="560" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-legend-red" label="Ещё не реализовано">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#F8D8D5;strokeColor=#BB3E37;fontColor=#BB3E37;fontSize=16;fontStyle=1;">
+            <mxGeometry x="1060" y="225" width="480" height="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-date" label="Состояние реализации · 15 октября 2026">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=13;fontStyle=0;">
+            <mxGeometry x="60" y="1415" width="1480" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-root" label="Внешний вид и удобство&lt;br&gt;&lt;b&gt;ГОТОВО&lt;/b&gt;">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;rounded=1;fillColor=#D6EFDF;strokeColor=#24804A;strokeWidth=2;fontColor=#202320;fontSize=23;spacing=16;">
+            <mxGeometry x="60" y="800.0" width="300" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-1" label="Оформление системы">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="320" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-1-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="interface-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-1-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Единая индустриальная концепция «СЕКЦИЯ»: тёмные, тёплые каменные и медные оттенки, спокойные поверхности для данных.&lt;/div&gt;">
+          <mxCell vertex="1" parent="interface-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="interface-edge-1" edge="1" parent="1" source="interface-root" target="interface-1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="interface-2" label="Реалистичные изображения">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="495" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-2-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="interface-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-2-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;На страницах доступа — склад со стеллажами, палетами и погрузчиком. Для стандартного крепежа используются предметные изображения; для остальных товаров — общий фон.&lt;/div&gt;">
+          <mxCell vertex="1" parent="interface-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="interface-edge-2" edge="1" parent="1" source="interface-root" target="interface-2" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="interface-3" label="Телефон и большой экран">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="670" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-3-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="interface-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-3-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Страницы адаптированы к узкому и широкому экрану. Длинные таблицы прокручиваются внутри своей области.&lt;/div&gt;">
+          <mxCell vertex="1" parent="interface-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="interface-edge-3" edge="1" parent="1" source="interface-root" target="interface-3" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="interface-4" label="Понятное состояние формы">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="845" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-4-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="interface-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-4-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Пользователь видит отправку, успешный результат или ошибку. Успех показывается после сохранения; при ошибке можно исправить данные и повторить действие.&lt;/div&gt;">
+          <mxCell vertex="1" parent="interface-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="interface-edge-4" edge="1" parent="1" source="interface-root" target="interface-4" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="interface-5" label="Удобное управление">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1020" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-5-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="interface-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-5-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Поля подписаны, фокус виден. Окна можно закрывать клавишей Escape; предусмотрены понятные сообщения для пустых списков и отказа в доступе.&lt;/div&gt;">
+          <mxCell vertex="1" parent="interface-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="interface-edge-5" edge="1" parent="1" source="interface-root" target="interface-5" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1095" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject id="interface-6" label="Защита данных пользователя">
+          <mxCell vertex="1" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;swimlane;startSize=48;horizontal=1;rounded=1;arcSize=8;collapsible=0;fillColor=#D6EFDF;swimlaneFillColor=#FFFDFA;strokeColor=#24804A;strokeWidth=2;fontSize=21;fontStyle=1;align=left;spacingLeft=24;spacingRight=18;">
+            <mxGeometry x="540" y="1195" width="1000" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-6-status" label="&lt;font color=&quot;#24804A&quot;&gt;ГОТОВО&lt;/font&gt;">
+          <mxCell vertex="1" parent="interface-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=14;fontStyle=1;">
+            <mxGeometry x="24" y="60" width="952" height="28" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject id="interface-6-body" label="&lt;div style=&quot;line-height:1.4&quot;&gt;Пароль не показывается в профиле и списках. Пользовательский текст отображается безопасно; изменение данных требует действующего сеанса.&lt;/div&gt;">
+          <mxCell vertex="1" parent="interface-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;text;fillColor=none;strokeColor=none;align=left;verticalAlign=top;spacing=0;fontSize=17;fontStyle=0;">
+            <mxGeometry x="24" y="92" width="952" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="interface-edge-6" edge="1" parent="1" source="interface-root" target="interface-6" style="whiteSpace=wrap;html=1;fontFamily=Arial;fontColor=#202320;edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999689;strokeWidth=2;endArrow=block;endSize=7;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="875.0" />
+              <mxPoint x="440" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
