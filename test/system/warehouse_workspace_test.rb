@@ -34,4 +34,56 @@ class WarehouseWorkspaceTest < ActionDispatch::SystemTestCase
     click_button "Выйти"
     assert_button "Войти"
   end
+  test "transfer approval and physical delivery follow warehouse assignments" do
+    destination = warehouses(:one)
+    company = destination.organization
+    source = company.warehouses.create!(name: "Северная база")
+    requester = create_user(name: "Заказчик", email_address: "requester@example.test", password: "secret123", status: "active")
+    requester.warehouse_memberships.sole.update!(role: "warehouse_manager")
+    sender = company.users.create!(name: "Кладовщик", email_address: "sender@example.test", password: "secret123", status: "active")
+    sender.warehouse_memberships.create!(organization: company, warehouse: source, status: "active", role: "warehouse_manager")
+    product = company.products.create!(name: "Анкер", sku: "TRANSFER-UI", unit: "шт")
+    source.stock_balances.create!(product: product, quantity: 20)
+
+    using_session(:destination) do
+      open_stock(requester)
+      click_button "Новая операция"
+      select "Перемещение", from: "Вид операции"
+      select source.name, from: "Склад-источник"
+      select "Анкер · TRANSFER-UI", from: "Товар"
+      fill_in "Количество", with: "7"
+      fill_in "Основание", with: "Установка ворот"
+      click_button "Оформить заявку"
+      assert_text "На согласовании"
+      click_button "Документы", exact: true
+      assert_text "Установка ворот"
+      assert_no_button "Одобрить"
+    end
+    using_session(:source) do
+      open_stock(sender)
+      click_button "Документы", exact: true
+      click_button "Одобрить"
+      click_button "Отправить", exact: true
+      assert_text "В пути"
+      assert_no_button "Принять"
+    end
+    using_session(:destination) do
+      click_button "Остатки", exact: true
+      click_button "Документы", exact: true
+      click_button "Принять"
+      assert_text "Принят"
+      click_button "Остатки", exact: true
+      assert_selector ".stock-item dd", text: "7 шт"
+    end
+  end
+
+  private
+
+  def open_stock(user)
+    visit "/"
+    fill_in "Электронная почта", with: user.email_address
+    find("input[name=password]").set("secret123")
+    click_button "Войти"
+    click_button "Складской учёт"
+  end
 end
