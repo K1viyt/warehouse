@@ -9,12 +9,22 @@ const verbs = { approve: "Одобрить", reject: "Отклонить", ship:
 const format = value => Number(value).toLocaleString("ru-RU", { maximumFractionDigits: 3 });
 const date = value => new Date(value).toLocaleString("ru-RU", { dateStyle: "short", timeStyle: "short" });
 
+function requestKey() {
+  if (crypto.randomUUID) return crypto.randomUUID();
+  // Local HTTP on a warehouse LAN can use getRandomValues without a secure context.
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = Array.from(bytes, value => value.toString(16).padStart(2, "0")).join("");
+  return [hex.slice(0,8), hex.slice(8,12), hex.slice(12,16), hex.slice(16,20), hex.slice(20)].join("-");
+}
+
 function DocumentForm({ inventory, warehouse, onClose, onSaved }) {
   const [kind, setKind] = useState("receipt");
   const [lines, setLines] = useState([{ product_id: "", quantity: "" }]);
   const [reason, setReason] = useState("");
   const [source, setSource] = useState("");
-  const [key] = useState(() => crypto.randomUUID());
+  const [key] = useState(requestKey);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
   const sources = inventory.warehouses.filter(w => String(w.id) !== String(warehouse.id));
@@ -134,7 +144,7 @@ export function Operations({user}) {
     actions={<ActionButton disabled={!data?.products.length} onClick={() => setForm(true)}><PackagePlus size={18}/>Новая операция</ActionButton>}/>
     {!warehouse ? <Empty title="Нет доступных складов">Назначения складов выдаёт администратор вашей фирмы.</Empty> : <>
       <div className="stock-context"><Truck aria-hidden="true"/><label>Рабочий склад<select value={id} onChange={e => {setData(null);setMessage("");setId(Number(e.target.value));}}>{user.warehouses.map(w => <option key={w.id} value={w.id}>{w.name}</option>)}</select></label></div>
-      <nav className="stock-tabs" aria-label="Учёт">{[["inventory","Остатки"],["documents","Документы"],["journal","Журнал"]].map(([t,name]) => <button key={t} aria-pressed={tab === t} onClick={() => setTab(t)}>{name}</button>)}</nav>
+      <nav className="stock-tabs" aria-label="Учёт">{[["inventory","Остатки"],["documents","Документы"],["journal","Журнал"]].map(([t,name]) => <button key={t} aria-pressed={tab === t} onClick={() => {setTab(t); if (t === "inventory") setRevision(v => v+1);}}>{name}</button>)}</nav>
       {message && <p className="notice" role="status">{message}</p>}<ErrorNotice error={error}/>
       {data ? tab === "inventory" ? <Inventory data={data} warehouse={warehouse}/> : <Ledger key={id+"-"+tab+"-"+ledgerVersion} tab={tab} warehouse={warehouse} inventory={data} refresh={() => setRevision(v => v+1)}/> : !error && <p role="status">Загружаем остатки…</p>}
       {error && <button className="secondary" onClick={() => setRevision(v => v+1)}>Повторить</button>}

@@ -2,7 +2,15 @@ require "test_helper"
 require "action_dispatch/system_test_case"
 
 class WarehouseWorkspaceTest < ActionDispatch::SystemTestCase
-  driven_by :selenium, using: :headless_chrome, screen_size: [ 1280, 900 ]
+  if ENV["SELENIUM_REMOTE_URL"].present?
+    Capybara.server_host = "127.0.0.1"
+    Capybara.app_host = ENV.fetch("CAPYBARA_APP_HOST")
+    Capybara.always_include_port = true
+    driven_by :selenium, using: :headless_chrome, screen_size: [ 1280, 900 ],
+      options: { browser: :remote, url: ENV.fetch("SELENIUM_REMOTE_URL") }
+  else
+    driven_by :selenium, using: :headless_chrome, screen_size: [ 1280, 900 ]
+  end
 
   test "operator creates a catalog card, posts a receipt and reads the warehouse journal" do
     user = create_user(name: "Оператор", email_address: "ui-flow@example.test", password: "secret123", status: "active")
