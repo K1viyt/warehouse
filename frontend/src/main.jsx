@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { Boxes, ChevronLeft, ChevronRight, CircleUserRound, LogOut, UsersRound } from "lucide-react";
+import { Boxes, Warehouse, CircleUserRound, LogOut, UsersRound } from "lucide-react";
 import { request } from "./api";
 import { roles, statuses } from "./labels";
 import { Brand, Gate, Pending, Verification } from "./auth";
 import { CompanyAccess } from "./access";
 import { PasswordForm, ResetPage } from "./recovery";
+import { Operations } from "./operations";
 import { Catalog } from "./catalog";
 import { Empty, ErrorNotice, Heading, Status } from "./ui";
 import "./workspace.css";
@@ -53,7 +54,7 @@ function App() {
   if (!user) return <><Gate onLogin={refresh}/>{error && <div className="global-error"><ErrorNotice error={error}/></div>}</>;
   if (user.password_change_required) return <main className="interstitial"><Brand/><section className="info-panel"><PasswordForm forced onDone={refresh}/><button className="secondary" onClick={logout}>Выйти</button></section></main>;
   if (user.status === "pending") return <><Pending user={user} onRefresh={refresh} onLogout={logout}/>{error && <div className="global-error"><ErrorNotice error={error}/></div>}</>;
-  const links = [["catalog", "Каталог", Boxes], ...(user.role === "admin" ? [["team", "Команда", UsersRound]] : []), ["profile", "Профиль", CircleUserRound]];
+  const links = [["catalog", "Каталог", Boxes], ["stock","Складской учёт",Warehouse], ...(user.role === "admin" ? [["team", "Команда", UsersRound]] : []), ["profile", "Профиль", CircleUserRound]];
   const active = links.some(([key]) => key === tab) ? tab : "catalog";
   return <div className="workspace">
     <aside className="sidebar">
@@ -66,6 +67,7 @@ function App() {
       <div className="workspace-body">
         <ErrorNotice error={error}/>
         {active === "catalog" && <Catalog user={user} onUnauthorized={refresh}/>}
+        {active === "stock" && <Operations user={user}/>}
         {active === "team" && <CompanyAccess/>}
         {active === "profile" && <Profile user={user} refresh={refresh}/>}
       </div>

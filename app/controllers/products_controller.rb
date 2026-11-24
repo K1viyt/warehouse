@@ -3,7 +3,9 @@ class ProductsController < ApplicationController
   MAX_PHOTO_SIZE = 5.megabytes
 
   before_action :require_active_user
-  before_action :find_product, only: [ :show, :photo, :update_photo ]
+  before_action :find_product, only: [ :show, :photo, :update_photo, :destroy, :archive, :update ]
+
+  before_action :require_edit_access, only: [ :update, :update_photo, :archive, :destroy ]
 
   def index
     products = current_organization.products.with_attached_photo.order(:id)
@@ -39,6 +41,19 @@ class ProductsController < ApplicationController
     render json: { errors: [ "A product with this article number already exists." ] }, status: :conflict
   end
 
+  def update
+    @product.with_lock { @product.update!(params.expect(product: [ :name, :sku ])) }
+    render json: product_json(@product)
+  end
+
+  def archive
+    retire(delete: false)
+  end
+
+  def destroy
+    retire(delete: true)
+  end
+
   def photo
     return head :not_found unless @product.photo.attached?
 
@@ -58,6 +73,29 @@ class ProductsController < ApplicationController
   end
 
   private
+
+  def require_edit_access
+    head :forbidden unless current_user.accessible_warehouses.exists?
+  end
+
+  def retire(delete:)
+    @product.with_lock do
+      lines = WarehouseLine.where(product: @product)
+      busy = @product.stock_balances.where.not(quantity: 0).exists? ||
+        lines.joins(:warehouse_document).where(warehouse_documents: { state: %w[pending approved shipped] }).exists?
+      history = delete && (@product.stock_movements.exists? || lines.exists?)
+      if busy || history
+        return render json: { error: "Есть остаток, документы или движения. Для завершённой истории используйте архив." }, status: :conflict
+      end
+      if delete
+        @product.stock_balances.delete_all
+        @product.destroy!
+      else
+        @product.update!(archived_at: Time.current)
+      end
+    end
+    head :no_content
+  end
 
   def find_product
     @product = current_organization.products.with_attached_photo.find_by(id: params[:id])

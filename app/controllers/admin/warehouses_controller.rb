@@ -11,6 +11,7 @@ module Admin
       warehouse = current_organization.warehouses.new(params.expect(warehouse: [ :name ]))
       authorize warehouse
       StockWarehouse.transaction do
+        warehouse.organization.lock!
         warehouse.save!
         current_organization.products.find_each do |product|
           warehouse.stock_balances.create!(organization: current_organization, product: product, quantity: 0)
