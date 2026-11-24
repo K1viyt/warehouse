@@ -143,3 +143,42 @@ h1 b, .brand > span { color: #ab3a1b; }
   .team-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .field-row { grid-template-columns: 1fr; }
 }
+
+/* Access management uses the same restrained warehouse palette. */
+.search-row { display: flex; gap: 12px; align-items: end; margin: 20px 0; flex-wrap: wrap; }
+.search-row label { display: grid; gap: 8px; flex: 1; min-width: 220px; }
+.access-card { border: 1px solid #c4bcae; padding: 20px; margin: 16px 0; background: #f2eee5; }
+.access-card small { color: #5e6258; }
+.access-card .button-row { margin-top: 14px; }
+.checkbox-label { display: flex !important; flex-direction: row; align-items: center; gap: 12px; }
+.fields .checkbox-label input[type=checkbox] { width: 20px; height: 20px; min-height: 20px; padding: 0; flex: 0 0 20px; }
+.checkbox-label span { min-width: 0; }
+.search-row input { width: 100%; min-height: 44px; padding: .7rem; border: 1px solid var(--line); background: var(--card); }
+.password-change { margin-top: 24px; max-width: 520px; }
+.team-row .button-row { flex-wrap: wrap; }
+.stock-context {display:flex;gap:1rem;align-items:center;background:var(--deep);color:var(--card);padding:1rem 1.25rem;border-left:5px solid var(--accent)}
+.stock-context label {display:grid;gap:.3rem;font-size:.78rem}
+.stock-context select {background:var(--deep);color:var(--card);border:0;border-bottom:1px solid #8f9283;font-size:1rem;max-width:100%}
+.stock-tabs,.doc-card footer {display:flex;gap:.45rem;flex-wrap:wrap;margin:1rem 0}
+.stock-tabs button {background:var(--card);border:1px solid var(--line);padding:.64rem 1.05rem;border-radius:.25rem}
+.stock-tabs button[aria-pressed=true] {background:var(--deep);color:var(--paper)}
+.stock-list {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:1rem}
+.stock-item,.doc-card {background:var(--card);border:1px solid var(--line);padding:clamp(.9rem,2vw,1.5rem);min-width:0;overflow-wrap:anywhere}
+.stock-item h3,.doc-card h3 {font-size:1.4rem;margin:.3rem 0 .8rem;letter-spacing:-.035em}
+.stock-item dl {display:flex;justify-content:space-between;gap:.4rem;padding:.9rem 0;border-block:1px solid var(--line)}
+.stock-item dt {font-size:.8rem;color:var(--muted)}
+.stock-item dd {margin:.25rem 0 0;font-variant-numeric:tabular-nums;font-size:1.3rem;font-weight:700}
+.stock-item dd small {font-size:.75rem}
+.operations summary,.panel-dialog summary {cursor:pointer;padding:.5rem 0}
+.doc-card {margin:.65rem 0}.doc-card header {display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
+.doc-card p {margin:.35rem 0}.doc-state {padding:.2rem .65rem;border-radius:1rem;background:#eee1c2;color:#5d431d;font-size:.83rem}
+.doc-state.posted,.doc-state.received {background:#dce7d3;color:#325237}
+.doc-state.shipped {background:#ffcfac;color:#583016}
+.ledger-filters.fields {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr));gap:.7rem}
+.operation-line {display:grid;gap:.65rem;min-width:0;border:1px solid var(--line);padding:.85rem}.operation-line legend {font-size:.8rem;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference) {
+  .workspace-body > section,.panel-dialog[open],.stock-list,.doc-card {animation:section-enter .22s ease-out both}
+  button {transition:background-color .16s ease,box-shadow .16s ease,transform .16s ease}
+  .primary:active:not(:disabled) {transform:translateY(1px)}
+  @keyframes section-enter {from {opacity:0;transform:translateY(5px)} to {opacity:1;transform:translateY(0)}}
+}

@@ -67,3 +67,6 @@ group :test do
   gem "selenium-webdriver"
   gem "minitest-mock"
 end
+
+# Shared authorization policies for organization and warehouse actions.
+gem "pundit", "~> 2.5"

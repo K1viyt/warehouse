@@ -11,6 +11,10 @@ class ProfilesController < ApplicationController
         role: user.role,
         status: user.status,
         email_verified: user.email_verified?,
+        password_change_required: user.password_change_required?,
+        memberships: user.warehouse_memberships.includes(:warehouse).order(:id).map { |item|
+          { id: item.id, warehouse_id: item.warehouse_id, warehouse_name: item.warehouse.name, role: item.role, status: item.status }
+        },
         organization: user.organization.as_json(only: [ :id, :name ]),
         warehouses: user.active? ? user.accessible_warehouses.order(:name).as_json(only: [ :id, :name ]) : []
       }, status: :ok

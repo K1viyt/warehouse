@@ -3,6 +3,12 @@ class User < ApplicationRecord
   belongs_to :organization
   has_many :warehouse_memberships, dependent: :restrict_with_error
   has_many :warehouses, through: :warehouse_memberships
+  has_many :password_recovery_requests, dependent: :restrict_with_error
+  before_update :rotate_credentials
+  validates :password, length: { minimum: 8 }, allow_nil: true
+  generates_token_for :account_recovery, expires_in: 15.minutes do
+    [ credentials_version, email_address, email_verified? ]
+  end
 
   def accessible_warehouses
     return organization.warehouses if admin?
@@ -27,4 +33,12 @@ class User < ApplicationRecord
       [ email_address, email_verified? ]
     end
     validates :email_address, format: { with: URI::MailTo::EMAIL_REGEXP }, allow_blank: true
+  private
+
+  def rotate_credentials
+    if will_save_change_to_password_digest? || will_save_change_to_email_address? || (will_save_change_to_status? && blocked?)
+      self.credentials_version += 1
+    end
+    self.email_verified_at = nil if will_save_change_to_email_address?
+  end
 end

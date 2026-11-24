@@ -22,7 +22,7 @@ const messages = {
 export class ApiError extends Error {
   constructor(status, data) {
     const errors = data?.errors ?? (data?.error ? [data.error] : []);
-    const fallback = status === 429 ? "Письмо уже запрошено. Повторите через минуту." : "Запрос не выполнен. Попробуйте снова.";
+    const fallback = status === 429 ? "Слишком много запросов. Подождите и повторите попытку." : "Запрос не выполнен. Попробуйте снова.";
     super(errors.map(message => messages[message] ?? message).join(" ") || fallback);
     this.status = status;
   }

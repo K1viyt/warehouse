@@ -1,4 +1,6 @@
 class StockMovement < ApplicationRecord
+  has_one :reversal, class_name: "StockMovement", foreign_key: :reversal_of_id
+  belongs_to :warehouse_document, optional: true
   belongs_to :organization
   belongs_to :warehouse, class_name: "StockWarehouse"
   belongs_to :product

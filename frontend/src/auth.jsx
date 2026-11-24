@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Box, Eye, EyeOff, LogOut, RefreshCw } from "lucide-react";
 import { request } from "./api";
+import { RecoveryRequest, PasswordForm } from "./recovery";
 import { assets } from "./labels";
 import { ActionButton, ErrorNotice } from "./ui";
 
@@ -66,7 +67,7 @@ export function Gate({ onLogin }) {
     <section className="gate-main">
       <span className="kicker">СЕКЦИЯ / ДОСТУП</span>
       <div className="gate-form">
-        {mode === "done" ? <>
+        {mode === "recovery" ? <RecoveryRequest onBack={() => setMode("login")}/> : mode === "done" ? <>
           <h1>Заявка принята<b>.</b></h1>
           <p className="subtle">Администратор организации проверит заявку на доступ. Подтвердить адрес можно по ссылке из письма.</p>
           <ActionButton onClick={() => setMode("login")}>Ко входу</ActionButton>
@@ -97,6 +98,7 @@ export function Gate({ onLogin }) {
             <ErrorNotice error={error}/>
             <ActionButton disabled={busy || (registration && !warehouse)}>{busy ? "Подождите…" : registration ? "Отправить заявку" : "Войти"}</ActionButton>
           </form>
+          {!registration && <button type="button" className="secondary" onClick={() => { setMode("recovery"); setError(null); }}>Забыли пароль?</button>}
         </>}
       </div>
       <span className="kicker gate-footer">СЕКЦИЯ — СИСТЕМА СКЛАДСКОГО УЧЁТА</span>
@@ -128,6 +130,7 @@ export function Pending({ user, onRefresh, onLogout }) {
     <span className="kicker">СЕКЦИЯ / ЗАЯВКА</span><h1>На рассмотрении<b>.</b></h1>
     <p>{user.name}, администратор организации «{user.organization.name}» должен одобрить доступ к складу.</p>
     <Verification user={user}/>
+    <PasswordForm onDone={onRefresh}/>
     <div className="button-row"><button className="primary" onClick={onRefresh}><RefreshCw size={16}/> Проверить статус</button>
       <button className="secondary" onClick={onLogout}><LogOut size={16}/> Выйти</button></div>
   </section></main>;

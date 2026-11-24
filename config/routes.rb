@@ -22,7 +22,26 @@ Rails.application.routes.draw do
   post "email_verification/resend", to: "email_verifications#resend"
   post "/warehouses/:warehouse_id/stock_issues", to: "stock_movements#create"
 
+  post "password_recovery", to: "password_recoveries#create"
+  get "password_reset", to: "workspace#show", as: :password_reset
+  post "password_reset", to: "passwords#reset"
+  patch "password", to: "passwords#update"
+
+  get "warehouses/:warehouse_id/inventory", to: "warehouse_operations#inventory"
+  post "warehouses/:warehouse_id/journal/:id/reverse", to: "warehouse_operations#reverse"
+  get "warehouses/:warehouse_id/journal", to: "warehouse_operations#journal"
+  get "warehouses/:warehouse_id/documents", to: "warehouse_operations#index"
+  post "warehouse_documents", to: "warehouse_operations#create"
+  patch "warehouse_documents/:id", to: "warehouse_operations#update"
+  patch "products/:id", to: "products#update"
+  delete "products/:id", to: "products#destroy"
+  post "products/:id/archive", to: "products#archive"
+
   namespace :admin do
+    resources :password_recovery_requests, only: [ :index, :update, :destroy ]
+    resources :warehouses, only: [ :index, :create, :update ]
+    resources :warehouse_memberships, only: [ :index, :create, :update ]
+    resources :access_events, only: :index
     get "users/pending", to: "users#pending"
     patch "users/:id/activate", to: "users#activate"
     patch "users/:id/block", to: "users#block"
