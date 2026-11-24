@@ -8,7 +8,7 @@ class StockIssue
 
   def self.call(product:, warehouse:, amount:, reason:, user:)
      raise AccessDenied, "Доступ к складу закрыт" unless
-      user.active? &&
+      StockWarehousePolicy.new(user, warehouse).operate? &&
       user.organization_id == warehouse.organization_id &&
       product.organization_id == warehouse.organization_id &&
       user.accessible_warehouses.exists?(id: warehouse.id)

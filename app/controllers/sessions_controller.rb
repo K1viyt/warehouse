@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
       else
         reset_session
         session[:user_id] = user.id
+        session[:credentials_version] = user.credentials_version
 
         render json: {
           id: user.id,

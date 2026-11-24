@@ -31,7 +31,7 @@ export function Modal({ title, onClose, children }) {
   return <dialog ref={ref} className="panel-dialog" aria-labelledby="panel-title" onCancel={onClose}
     onClick={event => { if (event.target === ref.current) onClose(); }}>
     <section className="dialog-inner">
-      <header><span className="kicker">КАТАЛОГ / КАРТОЧКА</span><button type="button" className="icon-button" aria-label="Закрыть" onClick={onClose}><X size={22}/></button></header>
+      <header><span className="kicker">СЕКЦИЯ / ДЕЙСТВИЕ</span><button type="button" className="icon-button" aria-label="Закрыть" onClick={onClose}><X size={22}/></button></header>
       <h2 id="panel-title">{title}</h2>
       {children}
     </section>

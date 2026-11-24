@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_11_04_212416) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_15_123000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "access_events", force: :cascade do |t|
+    t.bigint "organization_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "actor_id", null: false
+    t.string "action", null: false
+    t.jsonb "details", default: {}, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["actor_id"], name: "index_access_events_on_actor_id"
+    t.index ["organization_id", "created_at", "id"], name: "access_events_company_timeline"
+    t.index ["organization_id", "user_id", "created_at", "id"], name: "access_events_user_timeline"
+    t.index ["organization_id"], name: "index_access_events_on_organization_id"
+    t.index ["user_id"], name: "index_access_events_on_user_id"
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -47,8 +62,28 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_04_212416) do
     t.string "legal_form"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "code"
+    t.index ["code"], name: "index_organizations_on_code", unique: true
     t.check_constraint "legal_form::text = ANY (ARRAY['ooo'::character varying, 'ip'::character varying]::text[])", name: "organizations_legal_form_allowed"
     t.check_constraint "length(btrim(name::text)) > 0", name: "organizations_name_present"
+  end
+
+  create_table "password_recovery_requests", force: :cascade do |t|
+    t.bigint "organization_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "handled_by_id"
+    t.integer "credentials_version", null: false
+    t.string "status", default: "pending", null: false
+    t.datetime "expires_at", null: false
+    t.datetime "handled_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["handled_by_id"], name: "index_password_recovery_requests_on_handled_by_id"
+    t.index ["organization_id", "status", "id"], name: "recovery_requests_inbox"
+    t.index ["organization_id"], name: "index_password_recovery_requests_on_organization_id"
+    t.index ["user_id"], name: "index_password_recovery_requests_on_user_id"
+    t.index ["user_id"], name: "one_pending_password_recovery_per_user", unique: true, where: "((status)::text = 'pending'::text)"
+    t.check_constraint "status::text = ANY (ARRAY['pending'::character varying, 'completed'::character varying, 'rejected'::character varying, 'superseded'::character varying]::text[])", name: "recovery_request_status_allowed"
   end
 
   create_table "products", force: :cascade do |t|
@@ -88,6 +123,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_04_212416) do
     t.datetime "updated_at", null: false
     t.bigint "organization_id", null: false
     t.bigint "warehouse_id", null: false
+    t.index ["organization_id", "user_id", "created_at", "id"], name: "stock_movements_user_timeline"
     t.index ["organization_id"], name: "index_stock_movements_on_organization_id"
     t.index ["product_id"], name: "index_stock_movements_on_product_id"
     t.index ["user_id"], name: "index_stock_movements_on_user_id"
@@ -106,9 +142,14 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_04_212416) do
     t.datetime "updated_at", null: false
     t.bigint "organization_id", null: false
     t.datetime "email_verified_at"
+    t.integer "credentials_version", default: 0, null: false
+    t.boolean "password_change_required", default: false, null: false
+    t.index "organization_id, lower((name)::text) text_pattern_ops", name: "users_company_name_prefix"
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
     t.index ["organization_id", "id"], name: "index_users_on_organization_id_and_id", unique: true
+    t.index ["organization_id", "status", "id"], name: "index_users_on_organization_id_and_status_and_id"
     t.index ["organization_id"], name: "index_users_on_organization_id"
+    t.check_constraint "credentials_version >= 0", name: "users_credentials_version_nonnegative"
     t.check_constraint "role::text = ANY (ARRAY['operator'::character varying, 'admin'::character varying]::text[])", name: "users_role_allowed"
     t.check_constraint "status::text = ANY (ARRAY['pending'::character varying, 'active'::character varying, 'blocked'::character varying]::text[])", name: "users_status_allowed"
   end
@@ -140,8 +181,18 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_04_212416) do
     t.check_constraint "length(btrim(name::text)) > 0", name: "warehouses_name_present"
   end
 
+  add_foreign_key "access_events", "organizations"
+  add_foreign_key "access_events", "users"
+  add_foreign_key "access_events", "users", column: "actor_id"
+  add_foreign_key "access_events", "users", column: ["organization_id", "actor_id"], primary_key: ["organization_id", "id"], name: "fk_access_events_actor_id_tenant"
+  add_foreign_key "access_events", "users", column: ["organization_id", "user_id"], primary_key: ["organization_id", "id"], name: "fk_access_events_user_id_tenant"
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "password_recovery_requests", "organizations"
+  add_foreign_key "password_recovery_requests", "users"
+  add_foreign_key "password_recovery_requests", "users", column: "handled_by_id"
+  add_foreign_key "password_recovery_requests", "users", column: ["organization_id", "handled_by_id"], primary_key: ["organization_id", "id"], name: "fk_password_recovery_requests_handled_by_id_tenant"
+  add_foreign_key "password_recovery_requests", "users", column: ["organization_id", "user_id"], primary_key: ["organization_id", "id"], name: "fk_password_recovery_requests_user_id_tenant"
   add_foreign_key "products", "organizations"
   add_foreign_key "stock_balances", "organizations"
   add_foreign_key "stock_balances", "products"

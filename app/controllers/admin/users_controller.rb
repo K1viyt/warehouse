@@ -29,7 +29,14 @@ module Admin
       else
         user.with_lock do
           user.active!
-          user.warehouse_memberships.pending.update_all(status: "active", updated_at: Time.current)
+          pending = user.warehouse_memberships.pending
+          membership = if params[:membership_id].present?
+            pending.find(params[:membership_id])
+          elsif pending.count == 1
+            pending.first
+          end
+          raise CredentialChange::StaleRequest, "Выберите конкретное назначение на склад." unless membership
+          MembershipChange.call(actor: current_user, membership: membership, attributes: { status: "active" })
         end
 
         render json: user.as_json(
@@ -58,7 +65,10 @@ module Admin
         error: "Pending user must be activated first"
       }, status: :conflict
       else
-        user.blocked!
+        user.with_lock do
+          user.blocked!
+          AccessEvent.create!(organization: current_organization, user: user, actor: current_user, action: "user_blocked")
+        end
 
         render json: user.as_json(
           only: [ :id, :name, :email_address, :role, :status, :created_at ]
@@ -78,7 +88,10 @@ module Admin
       error: "Pending user must be activated first"
       }, status: :conflict
       else
-      user.active!
+      user.with_lock do
+        user.active!
+        AccessEvent.create!(organization: current_organization, user: user, actor: current_user, action: "user_unblocked")
+      end
 
       render json: user.as_json(
     only: [ :id, :name, :email_address, :role, :status, :created_at ]
@@ -90,6 +103,16 @@ module Admin
   per_page = params.fetch(:per_page, 20).to_i.clamp(1, 100)
 
   users_scope = current_organization.users.order(:id)
+  if params[:q].present?
+    query = params[:q].to_s.strip
+    if query.include?("@")
+      users_scope = users_scope.where(email_address: query.downcase)
+    elsif query.match?(/\A[0-9]+\z/)
+      users_scope = users_scope.where(id: query.to_i)
+    else
+      users_scope = users_scope.where("lower(name) LIKE ?", "#{User.sanitize_sql_like(query.downcase)}%")
+    end
+  end
 
   if params[:status].present?
     users_scope = users_scope.where(status: params[:status])

@@ -14,5 +14,6 @@ class WorkspaceController < ApplicationController
 
   def disable_caching
     response.headers["Cache-Control"] = "no-store"
+    response.headers["Referrer-Policy"] = "no-referrer"
   end
 end

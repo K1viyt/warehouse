@@ -2,7 +2,7 @@ class StockReceipt
   class AccessDenied < StandardError; end
 
   def self.call(product:, warehouse:, quantity:, user:, reason:)
-    unless user.active? && user.organization_id == warehouse.organization_id &&
+    unless StockWarehousePolicy.new(user, warehouse).operate? && user.organization_id == warehouse.organization_id &&
         product.organization_id == warehouse.organization_id && user.accessible_warehouses.exists?(id: warehouse.id)
       raise AccessDenied, "Warehouse access denied"
     end
